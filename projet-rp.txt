@@ -1,0 +1,133 @@
+PROJET RP - Idées
+
+--------------- Partie code ---------------
+1/ Organisation du code
+	- on fait en Python? (mais je suis ouverte aux autres languages de programmation)
+	- je propose d'avoir un fichier par une "partie logique" du code 
+	  (cad un fichier .py qui rassemble tout ce qui concerne la recherche locale, autre fichier pour tout ce qui concerne la lecture du 	  graphe, une partie de code pour des fonctions tests... ) et un "point d'entrée" (startMe.py) qui va appelé les fonctions des autres 
+	  fichiers (un gros, le fichier main)
+
+	- on peut réfléchir si on veut faire tout cela orienté objet, je n'aime pas trop les objets en Python, donc personnellement,
+	  je préférerais de l'éviter, mais c'est a voir
+	
+2/ Lire le graphe
+	- normalement fait, d'apres le format des fichiers données sur la site du web du concours
+	- la structure du fichier d'instances donnée sous-entend le codage d'un graphe a l'aide de la matrice d'adjacence (ce que j'ai fait)
+		- a nous de voir si c'est le codage le plus adapté, selon les algorithmes du graphe qu'on va utiliser
+		  (serait-il plus efficace de coder un graphe a l'aide d'une matrice d'incidence? Listes d'adjacence? 
+		  Cela dépend aussi du graphe - s'il y a beaucoup/peu de sommets et beaucoup/peu d'arretes ... etc.)
+	- les noeuds terminaux sont stockés dans une liste
+
+3/ Algorithmes génétiques
+	Voici les étapes générales que je propose :
+		* implanter le codage d'individu proposé dans 1.1 du sujet (c'est facile normalement)
+
+		* coder un algorithme génétique générale - i.e., qui appelle les fonctions
+			 createInitPopulation()			 
+			 fitness() 
+			 selection() 
+			 croissement()
+			 mutation()
+                         replaceGeneration()
+
+ 		  lesquelles seront "vides" pour l'instant
+			- ce qui n'est pas trop dur normalement avec le pseudo-code donné dans un poly du cours 4 de Patrice Perny
+			- ou a la limite, la page web https://fr.wikipedia.org/wiki/Algorithme_g%C3%A9n%C3%A9tique
+                          section "Schéma récapitulatif" le résume plutôt bien, c'est tres compréhensible
+
+		* ensuite, on peut coder plusieurs versions de chacun des fonctions ci-dessus. Pour garder la généralité, on peut faire 
+		  par example comme cela :
+
+			la fonction fitness pourra rassembler a 
+    				def fitness(param) :
+					if param == nom_fonction1 :
+					     res = //appel de la fonction fitness qui s'appelle nom_fonction1
+					if param == nom_fonction2 :
+	 				     res = //appel de la fonction fitness qui s'appelle nom_fonction2 
+					...etc.
+
+					return res;
+			
+			et on pourra procéder ainsi pour toutes les fonctions générales définies ci-dessus
+
+		* dans un premier temps, on pourra coder les variantes proposées dans le sujet du projet (sections 1.2 jusqu'a 1.6 + section 2)
+
+		* dans un deuxieme temps, si on a envie (j'en ai :D ), on peut essayer d'envisager nos propres stratégies d'évaluation de 		  		  fitness, de mutations, sélections etc. ... c'est vraiment amusant!!!
+		
+		* si on a le temps et envie, il y a d'autres types d'algorithmes génétiques pas abordés au cours mais tout a fait intéressants
+		  
+		  Par example, les algorithmes de class Particle Swarm Optimization fonctionnent plutôt bien, a ce que j'ai pu observer.
+		  
+		  Il s'agît des algorithmes inspirés par comportement des colonies des insects (ou d'autres animaux). L'idée, c'est que par 
+		  example s'il y a une colonie des oiseaux qui cherchent de la nourriture, il y a des individues 
+		  plus forts/plus intélligents/plus compétents disons, qui ont donc plus de chance de trouver de la nourriture. Donc les autres
+		  auront des tendances de les suivre. 	
+
+		  Dans cadre des algorithmes, il faut donc une fonction d'évaluation qui va estimer "la qualité" (compétence) d'une solution, 
+		  et on va essayer de faire approcher les autres solutions a celle qui semble d'etre la meilleure. Il n'y a plus de sélection, 
+	      	  mutation, générations... il y a une seule population qui bouge si tu veux. Et ce "bouge" veut dire qu'on modifie les solution  		  pour approcher vers la solution qui semble d'etre la meilleure. Et en meme temps, la meilleur solution doit "trouver" (aussi 		  par des heuristiques) la direction vers laquelle elle-meme se déplaces (c'est elle qui décide, les autres vont suivre).
+
+		  C'est l'idée de base, si ça te dit, on peut se lancer aussi dans ce sens la, et je peux t'en parler plus ou donner des 		  références. Si tu veux y regarder direct, la site qui est tres bien pour commencer est 		  http://www.swarmintelligence.org/tutorials.php
+
+	   	* on peut aussi explorer des variantes plus complexes des algos génétiques. Par example, j'ai aimé bien l'algorithme qui
+		  s'appelle MOEA/D. C'est un algorithme génétique classique, mais fait en parallele plusieurs fois. En fait, on prends la 		  population de départ et on la divise en plusieurs groupes. Apres, chaque groupe évolue indépendament des autres. Et de temps
+		  en temps, ils se croissent tous, ils produisent une nouvelle génération ensemble et ils se séparent de nouveau. 
+
+		  C'est comme s'il y avait plusieurs villages dans un pays, et une fois par 100 ans, leurs populations se croissent tous, se 		  mélangent un peu et puis répartent dans leurs village (certains déménagent...).  
+
+ 		  Ce qui n'est pas mal car on peut comme cela explorer plus profondement plusieurs parties de l'espace de recherche (et pas 
+		  seulement cela qui semble d'etre la meilleure au début = va dominer tous les autres au début), on a donc la population assez 		  		  diverse, on ne se restraint trop, mais on s'échange quand-meme de l'information génétique de temps en temps entre les zones,
+		  ce qui va faire que finalement, on va avoir des idées quelle zone est la meilleure et on va y "converger" (tout le monde
+		  va finir a y déménager). 
+
+		  Je peux t'en parler a vive voix si ça te dit, c'est peut-etre plus simple... 
+
+4/ La recherche locale
+	* dans un premier temps, coder ce qui est proposé dans la section 3, ce qui ne devrait pas etre si compliqué
+		Je propose que toujours, la solution est une suite de bits - bit 1 correspond au sommet qui est choisi, bit 0 au sommet qui ne 		l'est pas. 
+		La voisinage sera donc une suite qui differe en une valuer de bit. 
+		On cherche ensuite un arbre couvrant de poids minimum d'un sous-graphe induit par des sommets choisis (+ les terminaux).
+		
+	* on peut envisager nos propres :
+		- voisinages : p.e. les suites qui different en 2 bits - voisinage plus intéressant en termes de la recherche, 
+			       mais de taille quadratique (mais on peut essayer de le coder et voir ce que ça donne)
+	
+		- conditions d'arretes : c.f. plus bas 
+
+	  Idées possibles :
+		- on lance l'algorithme de la recherche locale plusieurs fois avec différentes conditions initiales, on garde enfin 
+		  la meilleure solution trouvée [1]
+		- on implémente l'algorithme de la recuit simulé présenté en cours (je voudrais bien!)
+		- ça arrive avec la recherche locale qu'on est coincé dans l'optimum local. Il existent des stratégies comment s'en sortir,
+		  par example :
+	    		si on est dans optimum locale :	on sauvegarde la solution
+							on perturbe un petit peu la solution (p.e., on change 5% de bits)
+							on recommence la recherche en prenant la solution perturbé comme la solution de départ
+							on compare la nouvelle solution obtenue avec celle sauvegardée - on garde la meilleure
+
+							on peut ainsi recommencer autant de fois qu'on le souhaite
+
+		  C'est en fait une modification de [1], l'idée ici est que si on part d'une solution initiale qui n'est pas loin de la solution
+		  optimale, il y a une grande chance que cette solution initiale est de qualité. Pourtant, le but était de sortir de l'optimum 		  		  local, si la solution perturbé est trop proche de cet optimum, on risque d'y retomber - la difficulté est donc de savoir
+		  de combien il faut en général perturbé, c'est vraiment expérimental et dépend de l'instance
+
+			
+
+------------------------------ Partie tests ----------------------------
+
+C'est noté dans la section 4 ce qu'il faut tester, mais pour aller plus loin, on peut s'inspirer de ce que j'ai fait dans mon stage.
+
+------------------------------ Partie rapport --------------------------
+
+On n'y est pas encore, il faut juste bien noter tout ce qu'on fait et pourquoi, et apres l'écrire proprement (de préférence en LaTex).
+
+----------------------------- Organisation ----------------------------
+
+- on peut se partager des tâches facilement en cadre de ce projet
+- je m'en vais pour la premiere semaine des vacances, mais je compte d'avancer beaucoup avant et apres
+- si on veut participer au concours, le code doit etre fait avant 1 mai (a la limite, on pourra l'améliorer encore apres, ce n'est pas grave...)
+- on peut se voir pendant la deuxieme semaine des vacances si tu es la et si on en a envie/besoin
+
+- !!! Mes examens de maths sont 4 mai, 14 mai et 15 mai. Je dois réviser, donc je ne dis pas que je ne vais pas bosser les porjets, mais je ne pourrai pas y aller au fond les derniers jours avant le dead-line. Pour cela, je préfere d'avancer avant au moins de ma part (je ne t'oblige pas de faire pareil!!! Je juste veux te faire savoir qu'a la fin, ça ne sera pas ma priorité numéro 1). Ce projet ne semble pas d'etre méchant, je crois que ça va aller vite, au moins la partie obligatoire. Donc c'est pour cela je compte d'avancer beaucoup les jours qui suivent, apres, je vais me concentrer surtout sur les maths et sur le projet de FOSYMA... qui me fais beaucoup plus peur. 
+
+ 
