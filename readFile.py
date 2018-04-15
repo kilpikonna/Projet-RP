@@ -2,10 +2,12 @@ import os
 import numpy as np
 
 
+
 def readEdges(file, nbNodes, nbEdges):
     
-    adjacencyMatrix = np.zeros((nbNodes,nbNodes)).astype(int)
-    
+    adjacencyMatrix = np.zeros((nbNodes,nbNodes))
+   
+                    
     for i in range(nbEdges):
         lineSplitted = file.readline().strip().split(" ")
         
@@ -17,7 +19,13 @@ def readEdges(file, nbNodes, nbEdges):
         adjacencyMatrix[int(lineSplitted[1])-1][int(lineSplitted[2])-1] = int(lineSplitted[3])
         #graph is not oriented
         adjacencyMatrix[int(lineSplitted[2])-1][int(lineSplitted[1])-1] = int(lineSplitted[3])
-
+        #print(adjacencyMatrix)
+    
+    #TODO 9.4: See how to initialize matrix directly with inf 
+    for j in range(nbNodes):
+        for k in range(nbNodes):
+            if adjacencyMatrix[j][k] == 0 and j != k :
+                 adjacencyMatrix[j][k] = np.inf    
     return adjacencyMatrix, file
 
 def readTerminals(file, nbTerminals):
@@ -31,7 +39,7 @@ def readTerminals(file, nbTerminals):
             print("******************* ERROR FILE FORMAT ************************* ")
             return None
         #else
-        terminalsList[i] = int(lineSplitted[1])
+        terminalsList[i] = int(lineSplitted[1])-1
     
     return terminalsList, file
 
@@ -60,4 +68,4 @@ def readInstance(fileName):
 
     return adjacencyMatrix, terminals
         
-readInstance(os.getcwd()+"\heuristic\instance001.gr")
+#readInstance(os.getcwd()+"\heuristic\instance001.gr")
