@@ -196,8 +196,41 @@ def distanceGraphHeuristic(adjacenceMatrix, terminals):
     g4 = KruskalOnSubset(g3AdjacencyMatrix, g3Nodes)
     
     print("------------------ G4: ",g4)
+    
+    degrees = [0 for i in range(adjacencyMatrix.shape[0])]
+    
+    arcs = g4.keys()
+    
+    for arc in arcs: 
+        degrees[arc[0]] +=1
+        degrees[arc[1]] +=1
+        
+    isTerminal = [False for i in range(adjacencyMatrix.shape[0])]
+    for i in range(len(terminals)):
+        isTerminal[int(terminals[i])] = True
+        
+    ntLeaves = nonTerminalLeaves(degrees, isTerminal)
+    
+    while(ntLeaves != []):
+        newTree = g4.copy()
+        print("spanningTree:", g4)
+        print("degrees: ",degrees)
+        print("ntLeaves: ", ntLeaves)
+        for leaf in ntLeaves:
+            for arc in g4:
+                print("arc: ", arc)
+                print("arc[0] = ",arc[0], " arc[1] = ",arc[1], "leaf = ",leaf)
+                if arc[0] == leaf or arc[1]==leaf:
+                    newTree.pop(arc,None)
+                    degrees[arc[0]] -= 1
+                    degrees[arc[1]] -= 1
+                    print(newTree)
+                    
+        g4 = newTree
+        
+        ntLeaves = nonTerminalLeaves(degrees, isTerminal)
       
-    return distanceGraphAdjacenceMatrix
+    return g4
 
 def nonTerminalLeaves(degrees, isTerminal):
     res = []    
@@ -223,6 +256,8 @@ def ACMHeuristic(adjacencyMatrix, terminals):
         
     ntLeaves = nonTerminalLeaves(degrees, isTerminal)
     
+    
+    
     while(ntLeaves != []):
         newTree = spanningTree.copy()
         print("spanningTree:", spanningTree)
@@ -235,10 +270,12 @@ def ACMHeuristic(adjacencyMatrix, terminals):
                 print("arc[0] = ",arc[0], " arc[1] = ",arc[1], "leaf = ",leaf)
                 if arc[0] == leaf or arc[1]==leaf:
                     newTree.pop(arc,None)
+                    degrees[arc[0]] -= 1
+                    degrees[arc[1]] -= 1
                     print(newTree)
                     
         spanningTree = newTree
-        
+        """
         arcs = spanningTree.keys()
         for i in range(len(degrees)):
             degrees[i] = 0
@@ -246,6 +283,7 @@ def ACMHeuristic(adjacencyMatrix, terminals):
         for arc in arcs: 
             degrees[arc[0]] +=1
             degrees[arc[1]] +=1
+        """
         ntLeaves = nonTerminalLeaves(degrees, isTerminal)
         
     return spanningTree    
@@ -288,6 +326,6 @@ print(adjacencyMatrix, terminals)
 print(lengthOfShortestPath(0, 1, adjacencyMatrix))
 dgMatrix = distanceGraphHeuristic(adjacencyMatrix, terminals)
 
-print(KruskalOnSubset(dgMatrix, terminals))
+
 ACMHeuristic(adjacencyMatrix, terminals)
 inputGraphRandomization(adjacencyMatrix, 5, 20)
