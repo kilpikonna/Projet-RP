@@ -3,6 +3,8 @@ Created on 10. 4. 2018
 
 @author: Magdalena
 '''
+ # coding=utf8
+
 from builtins import len
 
 import numpy as np
@@ -26,7 +28,7 @@ from itertools import chain
                            With the previous example, the complete graph adjacency matrix will have 10 lines and columns
                            The parametrs adjacencyMatrix will be its submatrix of the shape 4*4 containing the intersection of its 
                            3rd, 5th, 8th and 9th lines and columns
-@return : arcs, dict - keys are the couples of arcs connectiong two nodes of nodesSubset, values are the values of these arcs.
+@return : arcs, dict - keys are the couples of arcs connecting two nodes of nodesSubset, values are the values of these arcs.
           For example, if the graph from the previous example contains the arc (2,5) of the value 1, we will have:
           arcs[(2,5)] == 1
 """
@@ -44,10 +46,11 @@ def setOfArcsOnSubset(adjacencyMatrix, nodesSubset):
 @param adjacencyMatrix: np.array(float, float), the complete adjacency matrix of graph, adjacencyMatrix[i][j] contains the value of the arc connecting 
                         nodes i and j
                         we have:    adajacencyMatrix[i][i] = 0
-                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren´t connected
+                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren't connected
 @return arcs: dict(), the graph represented by a set of its arcs - for each couple of nodes i and j that are connected by an arc,
                       the dict associates the value adjacencyMatrix[i][j] to the key (i,j).
 """
+
 def setOfArcs(adjacencyMatrix):
     arcs = dict()
     
@@ -102,7 +105,7 @@ def KruskalOnSubset(adjacencyMatrix, nodesSubset):
 @param adjacencyMatrix: np.array(float, float), the complete adjacency matrix of graph, adjacencyMatrix[i][j] contains the value of the arc connecting 
                         nodes i and j
                         we have:    adajacencyMatrix[i][i] = 0
-                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren´t connected
+                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren't connected
 
 @return : spanningTree : dict() - the spanning tree of the graph represented as a set of arcs, using the dict() structure
           This spanning tree is found using the Kruskal algorithm, for the efficiency reason Kruskal algorithm uses 
@@ -195,7 +198,7 @@ def arrayMin(array):
 @param adjacencyMatrix: np.array(float, float), the complete adjacency matrix of graph, adjacencyMatrix[i][j] contains the value of the arc connecting 
                         nodes i and j
                         we have:    adajacencyMatrix[i][i] = 0
-                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren´t connected
+                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren't connected
 @param father: list(int), father[i] containts the predecessor of the node i on the path - enable the path reconstruction
 
 @return: arcs : dict() : the shortest path represented as a set of arcs. If the arc (i,j) of the value v is on the path,
@@ -218,7 +221,7 @@ def reconstructPath(startNode, finalNode, adjacencyMatrix, father):
 @param adjacencyMatrix: np.array(float, float), the complete adjacency matrix of graph, adjacencyMatrix[i][j] contains the value of the arc connecting 
                         nodes i and j
                         we have:    adajacencyMatrix[i][i] = 0
-                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren´t connected
+                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren't connected
 @return (path, distances[finalNode]) : (dict, float) : the shortest path connecting the startNode and finalNode (= the set of arcs
                                         represented by a dict() ), the length of this path
 """
@@ -254,7 +257,7 @@ def Dijkstra(startNode, finalNode, adjacencyMatrix):
 @param adjacenceMatrix: np.array(float, float), the complete adjacency matrix of graph, adjacencyMatrix[i][j] contains the value of the arc connecting 
                         nodes i and j
                         we have:    adajacencyMatrix[i][i] = 0
-                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren´t connected
+                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren't connected
 @param terminals: list() the list containing the index of terminal nodes
 @return: spanningTree : dict() - the spanning tree of the subgraph represented as a set of arcs, using the dict() structure
          It's a solution of the Steiner problem
@@ -351,7 +354,7 @@ def nonTerminalLeaves(degrees, isTerminal):
 @param adjacenceMatrix: np.array(float, float), the complete adjacency matrix of graph, adjacencyMatrix[i][j] contains the value of the arc connecting 
                         nodes i and j
                         we have:    adajacencyMatrix[i][i] = 0
-                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren´t connected
+                                    adjacencyMatrix[i][j] = + inf if nodes i and j aren't connected
 @param terminals: list() the list containing the index of terminal nodes
 @return: spanningTree : dict() - the spanning tree of the subgraph represented as a set of arcs, using the dict() structure
          It's a solution of the Steiner problem
@@ -432,7 +435,7 @@ print(lengthOfShortestPath(0, 8, matrix))
 
 adjacencyMatrix, terminals = readInstance(os.getcwd()+"\heuristic\instance_test.gr")
 print(adjacencyMatrix, terminals)
-print(lengthOfShortestPath(0, 1, adjacencyMatrix))
+#print(lengthOfShortestPath(0, 1, adjacencyMatrix))
 dgMatrix = distanceGraphHeuristic(adjacencyMatrix, terminals)
 
 
