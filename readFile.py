@@ -25,6 +25,7 @@ def readEdges(file, nbNodes, nbEdges):
     for j in range(nbNodes):
         for k in range(nbNodes):
             if adjacencyMatrix[j][k] == 0 and j != k :
+                 print("in the inf with j=",j,",      nd k=",k)
                  adjacencyMatrix[j][k] = np.inf    
     return adjacencyMatrix, file
 
@@ -68,4 +69,7 @@ def readInstance(fileName):
 
     return adjacencyMatrix, terminals
         
-#readInstance(os.getcwd()+"\heuristic\instance001.gr")
+#adjacencyMatrix, terminals = readInstance(os.getcwd()+"\heuristic\instance039.gr")
+#print(adjacencyMatrix, terminals)
+
+#readInstance(os.getcwd()+"\heuristic\instance039.gr")
