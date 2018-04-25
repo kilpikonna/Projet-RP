@@ -433,11 +433,11 @@ print(lengthOfShortestPath(0, 8, matrix))
 
 """
 
-adjacencyMatrix, terminals = readInstance(os.getcwd()+"\heuristic\instance_test.gr")
-print(adjacencyMatrix, terminals)
-#print(lengthOfShortestPath(0, 1, adjacencyMatrix))
-dgMatrix = distanceGraphHeuristic(adjacencyMatrix, terminals)
-
-
-ACMHeuristic(adjacencyMatrix, terminals)
-inputGraphRandomization(adjacencyMatrix, 5, 20)
+#adjacencyMatrix, terminals = readInstance(os.getcwd()+"\heuristic\instance_test.gr")
+#print(adjacencyMatrix, terminals)
+##print(lengthOfShortestPath(0, 1, adjacencyMatrix))
+#dgMatrix = distanceGraphHeuristic(adjacencyMatrix, terminals)
+#
+#
+#ACMHeuristic(adjacencyMatrix, terminals)
+#inputGraphRandomization(adjacencyMatrix, 5, 20)

@@ -22,7 +22,7 @@ import numpy as np
 from readFile import *
 from UnionFind import *
 import operator
-#from heuricticFunctions import *
+from heuricticFunctions import *
 
 
 """
@@ -32,7 +32,7 @@ def setOfArcsOnSubset(adjacencyMatrix, nodesSubset):
     
     for i in range (len(nodesSubset)):
         for j in range(i+1,len(nodesSubset)):
-            print("nodeSubseeeeeeeet ",nodesSubset[i])
+#            print("nodeSubseeeeeeeet ",nodesSubset[i])
             if adjacencyMatrix[nodesSubset[i]][nodesSubset[j]] != 0 and adjacencyMatrix[nodesSubset[i]][nodesSubset[j]] != np.inf:
                 arcs[(nodesSubset[i],nodesSubset[j])] = adjacencyMatrix[nodesSubset[i]][nodesSubset[j]]
 
@@ -85,8 +85,7 @@ def createRandomInitPopulation(individualSize, populationSize):
         print(p," population[i] ===", population[i])
         
     return population
-
-
+    
 """
 @param : terminals : 
 
@@ -106,9 +105,42 @@ def calculateRealIndex(terminals, i) :
         if terminal <= i :
             index+=1
         else :
-            print("else : terminal=",terminal," and i=",i," and index =",index)
+            
             break
+    
+    print("i==",i," but real index =",index)
     return index
+
+def solutionToIndividual(solution, terminals, individualSize) :
+    print("individual Size is :::::::::::::::",individualSize)
+    nonTerminal_Nodes = set([])
+    for arc in solution :
+        if arc[0] not in terminals :
+            nonTerminal_Nodes.add(arc[0])
+        if arc[1] not in terminals :
+            nonTerminal_Nodes.add(arc[1])
+
+    individual = []
+    
+    for i in range(individualSize) :
+        if calculateRealIndex(terminals, i) in nonTerminal_Nodes :
+            individual.append(1)
+        else : 
+            individual.append(0)
+    return individual
+
+def createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize):
+    
+    population = []
+    for i in range(populationSize) :
+        newAdjacencyMatrix = inputGraphRandomization(adjacencyMatrix, 5, 20)
+        solution = ACMHeuristic(newAdjacencyMatrix, terminals)
+        individual = solutionToIndividual(solution.keys(), terminals, len(adjacencyMatrix)-len(terminals))
+        population.append(individual)
+        print(">new individual :::: ", individual, "\n>from solution : ", solution.keys()," \n>terminals : ", terminals)#, " type is :::: ", individual.shape)
+    
+    print("population :::::", population)
+    return population
 
 """
 @param : terminals : 
@@ -234,9 +266,11 @@ def onePoint_crossover(parent1, parent2) :
 @return : selects a random node and reverses its value (add it to the solution if wasn't considered or delets it)
 
 """  
-def bitFlip_mutation(child) :
-    index = random.randint(0, len(child)-1)
-    child[index] = (child[index]+1)%2
+def bitFlip_mutation(child) : 
+    perform_mutation = random.random()
+    if(perform_mutation<=1/10) :
+        index = random.randint(0, len(child)-1)
+        child[index] = (child[index]+1)%2
 
 
 """
@@ -253,9 +287,13 @@ def bitFlip_mutation(child) :
 """  
 def simpleGeneticAlgorithm(adjacencyMatrix, terminals, n, M) :
     
-    population = createRandomInitPopulation(len(adjacencyMatrix)-len(terminals), n)
+#    population = createRandomInitPopulation(len(adjacencyMatrix)-len(terminals), n)
+    population = createHeuristicInitPopulation(matrix, [0,1], n)
     
     for k in range(n) :
+        
+        print("********************************* k=",k)
+        print("*************population : ",population)
         fitnessList = dict()
         fitnessSum = 0
         
@@ -288,6 +326,9 @@ def simpleGeneticAlgorithm(adjacencyMatrix, terminals, n, M) :
             # insertion : insert new individuals to the population
             population.append(child1)
             population.append(child2)
+       
+        
+           
         
 #        population = set(population) # is a good idea ?
         
@@ -301,22 +342,26 @@ def simpleGeneticAlgorithm(adjacencyMatrix, terminals, n, M) :
     return bestIndividual
         
 
-M = 1000
-n = 100
-adjacencyMatrix, terminals = readInstance(os.getcwd()+"\heuristic\instance039.gr")
-print(adjacencyMatrix, terminals)
-print(simpleGeneticAlgorithm(adjacencyMatrix, terminals, n, M))
+#adjacencyMatrix, terminals = readInstance(os.getcwd()+"\heuristic\instance039.gr")
+
+M = 100000*100000
+n = 5
+
+#print(adjacencyMatrix, terminals)
+#print(simpleGeneticAlgorithm(adjacencyMatrix, terminals, n, M))
 
 
-#matrix = np.zeros((5,5))
-#matrix[0] = [0,0,2,1,5]
-#matrix[1] = [0,0,6,4,2]
-#matrix[2] = [2,6,0,3,1]
-#matrix[3] = [1,4,3,0,2]
-#matrix[4] = [5,2,1,2,0]
+matrix = np.zeros((5,5))
+matrix[0] = [0,0,2,1,5]
+matrix[1] = [0,0,6,4,2]
+matrix[2] = [2,6,0,3,1]
+matrix[3] = [1,4,3,0,2]
+matrix[4] = [5,2,1,2,0]
 #parent1 = [0,0,1,1,0]
 #parent2 = [0,0,0,1,1]
-#n=4
+n=4
 
-#print(simpleGeneticAlgorithm(matrix, [0,1], n, M))
+print(createHeuristicInitPopulation(matrix, [0,1], 10))
+
+print(simpleGeneticAlgorithm(matrix, [0,1], n, M))
 
