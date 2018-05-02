@@ -1,0 +1,801 @@
+------------------Population generation time : 132.99960732460022
+
+********************************* k=0*************population size : 50*******************categories : 40******************launch Time : 133
+>>>>>>>>>>>>>>>> new Individuals : 7******************************************* k ====0 bestFit :95.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 133.45363330841064 ms********************************* k=1*************population size : 50*******************categories : 47******************launch Time : 133
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====1 bestFit :95.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 134.00266456604004 ms********************************* k=2*************population size : 50*******************categories : 48******************launch Time : 134
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====2 bestFit :95.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 134.56469678878784 ms********************************* k=3*************population size : 50*******************categories : 49******************launch Time : 134
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====3 bestFit :95.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 135.19273257255554 ms********************************* k=4*************population size : 50*******************categories : 50******************launch Time : 135
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====4 bestFit :95.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 135.89177250862122 ms********************************* k=5*************population size : 50*******************categories : 50******************launch Time : 135
+>>>>>>>>>>>>>>>> new Individuals : 10******************************************* k ====5 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 136.42080283164978 ms********************************* k=6*************population size : 50*******************categories : 50******************launch Time : 136
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====6 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 136.83282661437988 ms********************************* k=7*************population size : 50*******************categories : 50******************launch Time : 136
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====7 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 137.25785088539124 ms********************************* k=8*************population size : 50*******************categories : 50******************launch Time : 137
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====8 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 137.6708743572235 ms********************************* k=9*************population size : 50*******************categories : 50******************launch Time : 137
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====9 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 138.08389806747437 ms********************************* k=10*************population size : 50*******************categories : 50******************launch Time : 138
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====10 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 138.59992742538452 ms********************************* k=11*************population size : 50*******************categories : 50******************launch Time : 138
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====11 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 139.16095972061157 ms********************************* k=12*************population size : 50*******************categories : 50******************launch Time : 139
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====12 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 139.7059907913208 ms********************************* k=13*************population size : 50*******************categories : 50******************launch Time : 139
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====13 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 140.10401344299316 ms********************************* k=14*************population size : 50*******************categories : 50******************launch Time : 140
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====14 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 140.49103569984436 ms********************************* k=15*************population size : 50*******************categories : 50******************launch Time : 140
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====15 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 140.86705708503723 ms********************************* k=16*************population size : 50*******************categories : 50******************launch Time : 140
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====16 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 141.4060878753662 ms********************************* k=17*************population size : 50*******************categories : 50******************launch Time : 141
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====17 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 141.8251121044159 ms********************************* k=18*************population size : 50*******************categories : 50******************launch Time : 141
+>>>>>>>>>>>>>>>> new Individuals : 3******************************************* k ====18 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 142.21713423728943 ms********************************* k=19*************population size : 50*******************categories : 50******************launch Time : 142
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====19 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 142.5521535873413 ms********************************* k=20*************population size : 50*******************categories : 50******************launch Time : 142
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====20 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 142.87817215919495 ms********************************* k=21*************population size : 50*******************categories : 50******************launch Time : 142
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====21 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 143.33619832992554 ms********************************* k=22*************population size : 50*******************categories : 50******************launch Time : 143
+>>>>>>>>>>>>>>>> new Individuals : 3******************************************* k ====22 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 143.96423435211182 ms********************************* k=23*************population size : 50*******************categories : 50******************launch Time : 143
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====23 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 144.4832639694214 ms********************************* k=24*************population size : 50*******************categories : 50******************launch Time : 144
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====24 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 144.86628580093384 ms********************************* k=25*************population size : 50*******************categories : 50******************launch Time : 144
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====25 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 145.21630597114563 ms********************************* k=26*************population size : 50*******************categories : 50******************launch Time : 145
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====26 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 145.61332869529724 ms********************************* k=27*************population size : 50*******************categories : 50******************launch Time : 145
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====27 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 146.00035071372986 ms********************************* k=28*************population size : 50*******************categories : 50******************launch Time : 146
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====28 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 146.35037064552307 ms********************************* k=29*************population size : 50*******************categories : 50******************launch Time : 146
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====29 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 146.7383930683136 ms********************************* k=30*************population size : 50*******************categories : 50******************launch Time : 146
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====30 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 147.25842261314392 ms********************************* k=31*************population size : 50*******************categories : 50******************launch Time : 147
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====31 bestFit :94.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 147.67644667625427 ms********************************* k=32*************population size : 50*******************categories : 50******************launch Time : 147
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====32 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 148.06746888160706 ms********************************* k=33*************population size : 50*******************categories : 50******************launch Time : 148
+>>>>>>>>>>>>>>>> new Individuals : 3******************************************* k ====33 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 148.40748834609985 ms********************************* k=34*************population size : 50*******************categories : 50******************launch Time : 148
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====34 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 148.72250652313232 ms********************************* k=35*************population size : 50*******************categories : 50******************launch Time : 148
+>>>>>>>>>>>>>>>> new Individuals : 3******************************************* k ====35 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 149.2195348739624 ms********************************* k=36*************population size : 50*******************categories : 50******************launch Time : 149
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====36 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 149.687561750412 ms********************************* k=37*************population size : 50*******************categories : 50******************launch Time : 149
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====37 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 150.0815839767456 ms********************************* k=38*************population size : 50*******************categories : 50******************launch Time : 150
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====38 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 150.45060515403748 ms********************************* k=39*************population size : 50*******************categories : 50******************launch Time : 150
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====39 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 150.82462668418884 ms********************************* k=40*************population size : 50*******************categories : 50******************launch Time : 150
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====40 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 151.16964650154114 ms********************************* k=41*************population size : 50*******************categories : 50******************launch Time : 151
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====41 bestFit :92.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 151.49266505241394 ms********************************* k=42*************population size : 50*******************categories : 50******************launch Time : 151
+>>>>>>>>>>>>>>>> new Individuals : 4******************************************* k ====42 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 151.80768299102783 ms********************************* k=43*************population size : 50*******************categories : 50******************launch Time : 151
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====43 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 152.1297013759613 ms********************************* k=44*************population size : 50*******************categories : 50******************launch Time : 152
+>>>>>>>>>>>>>>>> new Individuals : 5******************************************* k ====44 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 152.43771886825562 ms********************************* k=45*************population size : 50*******************categories : 50******************launch Time : 152
+>>>>>>>>>>>>>>>> new Individuals : 3******************************************* k ====45 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 152.84474229812622 ms********************************* k=46*************population size : 50*******************categories : 50******************launch Time : 152
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====46 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 153.3667721748352 ms********************************* k=47*************population size : 50*******************categories : 50******************launch Time : 153
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====47 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 153.72679257392883 ms********************************* k=48*************population size : 50*******************categories : 50******************launch Time : 153
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====48 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 154.03481030464172 ms********************************* k=49*************population size : 50*******************categories : 50******************launch Time : 154
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====49 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 154.3368275165558 ms********************************* k=50*************population size : 50*******************categories : 50******************launch Time : 154
+>>>>>>>>>>>>>>>> new Individuals : 3******************************************* k ====50 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 154.60484290122986 ms********************************* k=51*************population size : 50*******************categories : 50******************launch Time : 154
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====51 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 154.92986154556274 ms********************************* k=52*************population size : 50*******************categories : 50******************launch Time : 154
+>>>>>>>>>>>>>>>> new Individuals : 3******************************************* k ====52 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 155.4118890762329 ms********************************* k=53*************population size : 50*******************categories : 50******************launch Time : 155
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====53 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 155.78291010856628 ms********************************* k=54*************population size : 50*******************categories : 50******************launch Time : 155
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====54 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 156.14893126487732 ms********************************* k=55*************population size : 50*******************categories : 50******************launch Time : 156
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====55 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 156.52195239067078 ms********************************* k=56*************population size : 50*******************categories : 50******************launch Time : 156
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====56 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 156.86897253990173 ms********************************* k=57*************population size : 50*******************categories : 50******************launch Time : 156
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====57 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 157.30299711227417 ms********************************* k=58*************population size : 50*******************categories : 50******************launch Time : 157
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====58 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 157.72902154922485 ms********************************* k=59*************population size : 50*******************categories : 50******************launch Time : 157
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====59 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 158.09104228019714 ms********************************* k=60*************population size : 50*******************categories : 50******************launch Time : 158
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====60 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 158.56006908416748 ms********************************* k=61*************population size : 50*******************categories : 50******************launch Time : 158
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====61 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 159.0660982131958 ms********************************* k=62*************population size : 50*******************categories : 50******************launch Time : 159
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====62 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 159.59312844276428 ms********************************* k=63*************population size : 50*******************categories : 50******************launch Time : 159
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====63 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 159.94214820861816 ms********************************* k=64*************population size : 50*******************categories : 50******************launch Time : 159
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====64 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 160.29716849327087 ms********************************* k=65*************population size : 50*******************categories : 50******************launch Time : 160
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====65 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 160.6261875629425 ms********************************* k=66*************population size : 50*******************categories : 50******************launch Time : 160
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====66 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 160.93520498275757 ms********************************* k=67*************population size : 50*******************categories : 50******************launch Time : 160
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====67 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 161.22822189331055 ms********************************* k=68*************population size : 50*******************categories : 50******************launch Time : 161
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====68 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 161.4952371120453 ms********************************* k=69*************population size : 50*******************categories : 50******************launch Time : 161
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====69 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 161.77325296401978 ms********************************* k=70*************population size : 50*******************categories : 50******************launch Time : 161
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====70 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 162.0842707157135 ms********************************* k=71*************population size : 50*******************categories : 50******************launch Time : 162
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====71 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 162.5962998867035 ms********************************* k=72*************population size : 50*******************categories : 50******************launch Time : 162
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====72 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 163.1023290157318 ms********************************* k=73*************population size : 50*******************categories : 50******************launch Time : 163
+>>>>>>>>>>>>>>>> new Individuals : 2******************************************* k ====73 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 163.59335708618164 ms********************************* k=74*************population size : 50*******************categories : 50******************launch Time : 163
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====74 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 164.0653841495514 ms********************************* k=75*************population size : 50*******************categories : 50******************launch Time : 164
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====75 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 164.43140506744385 ms********************************* k=76*************population size : 50*******************categories : 50******************launch Time : 164
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====76 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 164.77942490577698 ms********************************* k=77*************population size : 50*******************categories : 50******************launch Time : 164
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====77 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 165.07744193077087 ms********************************* k=78*************population size : 50*******************categories : 50******************launch Time : 165
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====78 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 165.39145970344543 ms********************************* k=79*************population size : 50*******************categories : 50******************launch Time : 165
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====79 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 165.72947931289673 ms********************************* k=80*************population size : 50*******************categories : 50******************launch Time : 165
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====80 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 166.21550703048706 ms********************************* k=81*************population size : 50*******************categories : 50******************launch Time : 166
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====81 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 166.58752846717834 ms********************************* k=82*************population size : 50*******************categories : 50******************launch Time : 166
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====82 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 167.0025520324707 ms********************************* k=83*************population size : 50*******************categories : 50******************launch Time : 167
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====83 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 167.50958108901978 ms********************************* k=84*************population size : 50*******************categories : 50******************launch Time : 167
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====84 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 168.03561115264893 ms********************************* k=85*************population size : 50*******************categories : 50******************launch Time : 168
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====85 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 168.48763704299927 ms********************************* k=86*************population size : 50*******************categories : 50******************launch Time : 168
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====86 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 168.84265732765198 ms********************************* k=87*************population size : 50*******************categories : 50******************launch Time : 168
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====87 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 169.2006778717041 ms********************************* k=88*************population size : 50*******************categories : 50******************launch Time : 169
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====88 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 169.55969834327698 ms********************************* k=89*************population size : 50*******************categories : 50******************launch Time : 169
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====89 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 169.92671918869019 ms********************************* k=90*************population size : 50*******************categories : 50******************launch Time : 169
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====90 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 170.28073954582214 ms********************************* k=91*************population size : 50*******************categories : 50******************launch Time : 170
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====91 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 170.66476154327393 ms********************************* k=92*************population size : 50*******************categories : 50******************launch Time : 170
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====92 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 170.9747793674469 ms********************************* k=93*************population size : 50*******************categories : 50******************launch Time : 170
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====93 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 171.23379397392273 ms********************************* k=94*************population size : 50*******************categories : 50******************launch Time : 171
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====94 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 171.49280881881714 ms********************************* k=95*************population size : 50*******************categories : 50******************launch Time : 171
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====95 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 171.74482321739197 ms********************************* k=96*************population size : 50*******************categories : 50******************launch Time : 171
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====96 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 171.99883770942688 ms********************************* k=97*************population size : 50*******************categories : 50******************launch Time : 171
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====97 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 172.25185227394104 ms********************************* k=98*************population size : 50*******************categories : 50******************launch Time : 172
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====98 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 172.5978720188141 ms********************************* k=99*************population size : 50*******************categories : 50******************launch Time : 172
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====99 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 173.07989954948425 ms********************************* k=100*************population size : 50*******************categories : 50******************launch Time : 173
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====100 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 173.59792923927307 ms********************************* k=101*************population size : 50*******************categories : 50******************launch Time : 173
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====101 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 173.97695088386536 ms********************************* k=102*************population size : 50*******************categories : 50******************launch Time : 173
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====102 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 174.33897161483765 ms********************************* k=103*************population size : 50*******************categories : 50******************launch Time : 174
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====103 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 174.6679904460907 ms********************************* k=104*************population size : 50*******************categories : 50******************launch Time : 174
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====104 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 174.96800756454468 ms********************************* k=105*************population size : 50*******************categories : 50******************launch Time : 174
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====105 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 175.27502512931824 ms********************************* k=106*************population size : 50*******************categories : 50******************launch Time : 175
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====106 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 175.58404302597046 ms********************************* k=107*************population size : 50*******************categories : 50******************launch Time : 175
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====107 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 175.942063331604 ms********************************* k=108*************population size : 50*******************categories : 50******************launch Time : 175
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====108 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 176.23908042907715 ms********************************* k=109*************population size : 50*******************categories : 50******************launch Time : 176
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====109 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 176.53309726715088 ms********************************* k=110*************population size : 50*******************categories : 50******************launch Time : 176
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====110 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 176.83811450004578 ms********************************* k=111*************population size : 50*******************categories : 50******************launch Time : 176
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====111 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 177.11613059043884 ms********************************* k=112*************population size : 50*******************categories : 50******************launch Time : 177
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====112 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 177.57915687561035 ms********************************* k=113*************population size : 50*******************categories : 50******************launch Time : 177
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====113 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 177.99118041992188 ms********************************* k=114*************population size : 50*******************categories : 50******************launch Time : 177
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====114 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 178.35820150375366 ms********************************* k=115*************population size : 50*******************categories : 50******************launch Time : 178
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====115 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 178.75922441482544 ms********************************* k=116*************population size : 50*******************categories : 50******************launch Time : 178
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====116 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 179.32325673103333 ms********************************* k=117*************population size : 50*******************categories : 50******************launch Time : 179
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====117 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 179.8402862548828 ms********************************* k=118*************population size : 50*******************categories : 50******************launch Time : 179
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====118 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 180.34831523895264 ms********************************* k=119*************population size : 50*******************categories : 50******************launch Time : 180
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====119 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 180.7313370704651 ms********************************* k=120*************population size : 50*******************categories : 50******************launch Time : 180
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====120 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 181.0993583202362 ms********************************* k=121*************population size : 50*******************categories : 50******************launch Time : 181
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====121 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 181.46537923812866 ms********************************* k=122*************population size : 50*******************categories : 50******************launch Time : 181
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====122 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 181.8183994293213 ms********************************* k=123*************population size : 50*******************categories : 50******************launch Time : 181
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====123 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 182.20142126083374 ms********************************* k=124*************population size : 50*******************categories : 50******************launch Time : 182
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====124 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 182.68344902992249 ms********************************* k=125*************population size : 50*******************categories : 50******************launch Time : 182
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====125 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 183.16447639465332 ms********************************* k=126*************population size : 50*******************categories : 50******************launch Time : 183
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====126 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 183.53949785232544 ms********************************* k=127*************population size : 50*******************categories : 50******************launch Time : 183
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====127 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 183.8785171508789 ms********************************* k=128*************population size : 50*******************categories : 50******************launch Time : 183
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====128 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 184.27854013442993 ms********************************* k=129*************population size : 50*******************categories : 50******************launch Time : 184
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====129 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 184.57755708694458 ms********************************* k=130*************population size : 50*******************categories : 50******************launch Time : 184
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====130 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 184.88257479667664 ms********************************* k=131*************population size : 50*******************categories : 50******************launch Time : 184
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====131 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 185.21559357643127 ms********************************* k=132*************population size : 50*******************categories : 50******************launch Time : 185
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====132 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 185.5046103000641 ms********************************* k=133*************population size : 50*******************categories : 50******************launch Time : 185
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====133 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 185.76562523841858 ms********************************* k=134*************population size : 50*******************categories : 50******************launch Time : 185
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====134 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 186.00663900375366 ms********************************* k=135*************population size : 50*******************categories : 50******************launch Time : 186
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====135 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 186.37766027450562 ms********************************* k=136*************population size : 50*******************categories : 50******************launch Time : 186
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====136 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 186.9736943244934 ms********************************* k=137*************population size : 50*******************categories : 50******************launch Time : 186
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====137 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 187.3357150554657 ms********************************* k=138*************population size : 50*******************categories : 50******************launch Time : 187
+>>>>>>>>>>>>>>>> new Individuals : 1******************************************* k ====138 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 187.71273636817932 ms********************************* k=139*************population size : 50*******************categories : 50******************launch Time : 187
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====139 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 188.06075644493103 ms********************************* k=140*************population size : 50*******************categories : 50******************launch Time : 188
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====140 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 188.57878613471985 ms********************************* k=141*************population size : 50*******************categories : 50******************launch Time : 188
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====141 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 189.09881591796875 ms********************************* k=142*************population size : 50*******************categories : 50******************launch Time : 189
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====142 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 189.62084579467773 ms********************************* k=143*************population size : 50*******************categories : 50******************launch Time : 189
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====143 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 190.13787531852722 ms********************************* k=144*************population size : 50*******************categories : 50******************launch Time : 190
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====144 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 190.53589797019958 ms********************************* k=145*************population size : 50*******************categories : 50******************launch Time : 190
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====145 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 190.88791823387146 ms********************************* k=146*************population size : 50*******************categories : 50******************launch Time : 190
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====146 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 191.23693823814392 ms********************************* k=147*************population size : 50*******************categories : 50******************launch Time : 191
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====147 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 191.59195852279663 ms********************************* k=148*************population size : 50*******************categories : 50******************launch Time : 191
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====148 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 191.9929814338684 ms********************************* k=149*************population size : 50*******************categories : 50******************launch Time : 191
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====149 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 192.5470130443573 ms********************************* k=150*************population size : 50*******************categories : 50******************launch Time : 192
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====150 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 193.13804697990417 ms********************************* k=151*************population size : 50*******************categories : 50******************launch Time : 193
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====151 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 193.6170744895935 ms********************************* k=152*************population size : 50*******************categories : 50******************launch Time : 193
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====152 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 194.16710567474365 ms********************************* k=153*************population size : 50*******************categories : 50******************launch Time : 194
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====153 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 194.69413566589355 ms********************************* k=154*************population size : 50*******************categories : 50******************launch Time : 194
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====154 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 195.1861641407013 ms********************************* k=155*************population size : 50*******************categories : 50******************launch Time : 195
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====155 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 195.59618759155273 ms********************************* k=156*************population size : 50*******************categories : 50******************launch Time : 195
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====156 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 196.00621104240417 ms********************************* k=157*************population size : 50*******************categories : 50******************launch Time : 196
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====157 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 196.46523714065552 ms********************************* k=158*************population size : 50*******************categories : 50******************launch Time : 196
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====158 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 196.85825967788696 ms********************************* k=159*************population size : 50*******************categories : 50******************launch Time : 196
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====159 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 197.22028017044067 ms********************************* k=160*************population size : 50*******************categories : 50******************launch Time : 197
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====160 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 197.60930275917053 ms********************************* k=161*************population size : 50*******************categories : 50******************launch Time : 197
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====161 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 197.9333212375641 ms********************************* k=162*************population size : 50*******************categories : 50******************launch Time : 197
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====162 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 198.4133484363556 ms********************************* k=163*************population size : 50*******************categories : 50******************launch Time : 198
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====163 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 198.92037773132324 ms********************************* k=164*************population size : 50*******************categories : 50******************launch Time : 198
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====164 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 199.34740209579468 ms********************************* k=165*************population size : 50*******************categories : 50******************launch Time : 199
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====165 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 199.70842266082764 ms********************************* k=166*************population size : 50*******************categories : 50******************launch Time : 199
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====166 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 200.07044339179993 ms********************************* k=167*************population size : 50*******************categories : 50******************launch Time : 200
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====167 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 200.39746189117432 ms********************************* k=168*************population size : 50*******************categories : 50******************launch Time : 200
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====168 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 200.69947957992554 ms********************************* k=169*************population size : 50*******************categories : 50******************launch Time : 200
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====169 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 200.99849653244019 ms********************************* k=170*************population size : 50*******************categories : 50******************launch Time : 200
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====170 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 201.2975137233734 ms********************************* k=171*************population size : 50*******************categories : 50******************launch Time : 201
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====171 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 201.59953093528748 ms********************************* k=172*************population size : 50*******************categories : 50******************launch Time : 201
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====172 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 201.89854788780212 ms********************************* k=173*************population size : 50*******************categories : 50******************launch Time : 201
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====173 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 202.19556498527527 ms********************************* k=174*************population size : 50*******************categories : 50******************launch Time : 202
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====174 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 202.49758219718933 ms********************************* k=175*************population size : 50*******************categories : 50******************launch Time : 202
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====175 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 202.92660689353943 ms********************************* k=176*************population size : 50*******************categories : 50******************launch Time : 202
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====176 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 203.42963552474976 ms********************************* k=177*************population size : 50*******************categories : 50******************launch Time : 203
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====177 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 203.97166657447815 ms********************************* k=178*************population size : 50*******************categories : 50******************launch Time : 203
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====178 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 204.4776954650879 ms********************************* k=179*************population size : 50*******************categories : 50******************launch Time : 204
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====179 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 204.94972252845764 ms********************************* k=180*************population size : 50*******************categories : 50******************launch Time : 204
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====180 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 205.31274342536926 ms********************************* k=181*************population size : 50*******************categories : 50******************launch Time : 205
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====181 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 205.62276101112366 ms********************************* k=182*************population size : 50*******************categories : 50******************launch Time : 205
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====182 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 205.92977857589722 ms********************************* k=183*************population size : 50*******************categories : 50******************launch Time : 205
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====183 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 206.20879459381104 ms********************************* k=184*************population size : 50*******************categories : 50******************launch Time : 206
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====184 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 206.47780990600586 ms********************************* k=185*************population size : 50*******************categories : 50******************launch Time : 206
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====185 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 206.73182463645935 ms********************************* k=186*************population size : 50*******************categories : 50******************launch Time : 206
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====186 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 206.98983931541443 ms********************************* k=187*************population size : 50*******************categories : 50******************launch Time : 206
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====187 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 207.24585390090942 ms********************************* k=188*************population size : 50*******************categories : 50******************launch Time : 207
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====188 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 207.57487273216248 ms********************************* k=189*************population size : 50*******************categories : 50******************launch Time : 207
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====189 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 208.08490180969238 ms********************************* k=190*************population size : 50*******************categories : 50******************launch Time : 208
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====190 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 208.6229326725006 ms********************************* k=191*************population size : 50*******************categories : 50******************launch Time : 208
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====191 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 209.1179609298706 ms********************************* k=192*************population size : 50*******************categories : 50******************launch Time : 209
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====192 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 209.61598944664001 ms********************************* k=193*************population size : 50*******************categories : 50******************launch Time : 209
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====193 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 210.0220127105713 ms********************************* k=194*************population size : 50*******************categories : 50******************launch Time : 210
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====194 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 210.39103388786316 ms********************************* k=195*************population size : 50*******************categories : 50******************launch Time : 210
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====195 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 210.7510542869568 ms********************************* k=196*************population size : 50*******************categories : 50******************launch Time : 210
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====196 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 211.1090748310089 ms********************************* k=197*************population size : 50*******************categories : 50******************launch Time : 211
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====197 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 211.60710310935974 ms********************************* k=198*************population size : 50*******************categories : 50******************launch Time : 211
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====198 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 212.12513303756714 ms********************************* k=199*************population size : 50*******************categories : 50******************launch Time : 212
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====199 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 212.67016410827637 ms********************************* k=200*************population size : 50*******************categories : 50******************launch Time : 212
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====200 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 213.17419290542603 ms********************************* k=201*************population size : 50*******************categories : 50******************launch Time : 213
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====201 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 213.7082233428955 ms********************************* k=202*************population size : 50*******************categories : 50******************launch Time : 213
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====202 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 214.19725155830383 ms********************************* k=203*************population size : 50*******************categories : 50******************launch Time : 214
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====203 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 214.75228309631348 ms********************************* k=204*************population size : 50*******************categories : 50******************launch Time : 214
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====204 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 215.24631142616272 ms********************************* k=205*************population size : 50*******************categories : 50******************launch Time : 215
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====205 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 215.77234148979187 ms********************************* k=206*************population size : 50*******************categories : 50******************launch Time : 215
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====206 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 216.1803650856018 ms********************************* k=207*************population size : 50*******************categories : 50******************launch Time : 216
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====207 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 216.68439364433289 ms********************************* k=208*************population size : 50*******************categories : 50******************launch Time : 216
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====208 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 217.18842267990112 ms********************************* k=209*************population size : 50*******************categories : 50******************launch Time : 217
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====209 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 217.7004518508911 ms********************************* k=210*************population size : 50*******************categories : 50******************launch Time : 217
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====210 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 218.2004804611206 ms********************************* k=211*************population size : 50*******************categories : 50******************launch Time : 218
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====211 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 218.58150219917297 ms********************************* k=212*************population size : 50*******************categories : 50******************launch Time : 218
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====212 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 218.93652248382568 ms********************************* k=213*************population size : 50*******************categories : 50******************launch Time : 218
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====213 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 219.2985429763794 ms********************************* k=214*************population size : 50*******************categories : 50******************launch Time : 219
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====214 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 219.64456295967102 ms********************************* k=215*************population size : 50*******************categories : 50******************launch Time : 219
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====215 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 219.9495804309845 ms********************************* k=216*************population size : 50*******************categories : 50******************launch Time : 219
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====216 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 220.24859738349915 ms********************************* k=217*************population size : 50*******************categories : 50******************launch Time : 220
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====217 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 220.56461572647095 ms********************************* k=218*************population size : 50*******************categories : 50******************launch Time : 220
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====218 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 220.84763193130493 ms********************************* k=219*************population size : 50*******************categories : 50******************launch Time : 220
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====219 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 221.22065329551697 ms********************************* k=220*************population size : 50*******************categories : 50******************launch Time : 221
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====220 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 221.7216818332672 ms********************************* k=221*************population size : 50*******************categories : 50******************launch Time : 221
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====221 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 222.27171325683594 ms********************************* k=222*************population size : 50*******************categories : 50******************launch Time : 222
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====222 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 222.78174257278442 ms********************************* k=223*************population size : 50*******************categories : 50******************launch Time : 222
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====223 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 223.2637701034546 ms********************************* k=224*************population size : 50*******************categories : 50******************launch Time : 223
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====224 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 223.62479066848755 ms********************************* k=225*************population size : 50*******************categories : 50******************launch Time : 223
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====225 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 223.98481130599976 ms********************************* k=226*************population size : 50*******************categories : 50******************launch Time : 223
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====226 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 224.33383107185364 ms********************************* k=227*************population size : 50*******************categories : 50******************launch Time : 224
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====227 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 224.63284826278687 ms********************************* k=228*************population size : 50*******************categories : 50******************launch Time : 224
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====228 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 224.9318652153015 ms********************************* k=229*************population size : 50*******************categories : 50******************launch Time : 224
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====229 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 225.22388219833374 ms********************************* k=230*************population size : 50*******************categories : 50******************launch Time : 225
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====230 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 225.5058982372284 ms********************************* k=231*************population size : 50*******************categories : 50******************launch Time : 225
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====231 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 225.77391362190247 ms********************************* k=232*************population size : 50*******************categories : 50******************launch Time : 225
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====232 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 226.24594068527222 ms********************************* k=233*************population size : 50*******************categories : 50******************launch Time : 226
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====233 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 226.81497311592102 ms********************************* k=234*************population size : 50*******************categories : 50******************launch Time : 226
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====234 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 227.31000137329102 ms********************************* k=235*************population size : 50*******************categories : 50******************launch Time : 227
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====235 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 227.81403017044067 ms********************************* k=236*************population size : 50*******************categories : 50******************launch Time : 227
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====236 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 228.23805451393127 ms********************************* k=237*************population size : 50*******************categories : 50******************launch Time : 228
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====237 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 228.59507513046265 ms********************************* k=238*************population size : 50*******************categories : 50******************launch Time : 228
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====238 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 228.9480950832367 ms********************************* k=239*************population size : 50*******************categories : 50******************launch Time : 228
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====239 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 229.2811141014099 ms********************************* k=240*************population size : 50*******************categories : 50******************launch Time : 229
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====240 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 229.72113943099976 ms********************************* k=241*************population size : 50*******************categories : 50******************launch Time : 229
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====241 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 230.21316766738892 ms********************************* k=242*************population size : 50*******************categories : 50******************launch Time : 230
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====242 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 230.7421977519989 ms********************************* k=243*************population size : 50*******************categories : 50******************launch Time : 230
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====243 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 231.09621810913086 ms********************************* k=244*************population size : 50*******************categories : 50******************launch Time : 231
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====244 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 231.47023940086365 ms********************************* k=245*************population size : 50*******************categories : 50******************launch Time : 231
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====245 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 231.7942578792572 ms********************************* k=246*************population size : 50*******************categories : 50******************launch Time : 231
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====246 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 232.28628611564636 ms********************************* k=247*************population size : 50*******************categories : 50******************launch Time : 232
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====247 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 232.79331493377686 ms********************************* k=248*************population size : 50*******************categories : 50******************launch Time : 232
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====248 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 233.295343875885 ms********************************* k=249*************population size : 50*******************categories : 50******************launch Time : 233
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====249 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 233.80037260055542 ms********************************* k=250*************population size : 50*******************categories : 50******************launch Time : 233
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====250 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 234.21739649772644 ms********************************* k=251*************population size : 50*******************categories : 50******************launch Time : 234
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====251 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 234.57941722869873 ms********************************* k=252*************population size : 50*******************categories : 50******************launch Time : 234
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====252 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 234.93443751335144 ms********************************* k=253*************population size : 50*******************categories : 50******************launch Time : 234
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====253 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 235.28845763206482 ms********************************* k=254*************population size : 50*******************categories : 50******************launch Time : 235
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====254 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 235.58947491645813 ms********************************* k=255*************population size : 50*******************categories : 50******************launch Time : 235
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====255 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 236.0915036201477 ms********************************* k=256*************population size : 50*******************categories : 50******************launch Time : 236
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====256 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 236.58253169059753 ms********************************* k=257*************population size : 50*******************categories : 50******************launch Time : 236
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====257 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 236.96255350112915 ms********************************* k=258*************population size : 50*******************categories : 50******************launch Time : 236
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====258 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 237.4635820388794 ms********************************* k=259*************population size : 50*******************categories : 50******************launch Time : 237
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====259 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 237.87160539627075 ms********************************* k=260*************population size : 50*******************categories : 50******************launch Time : 237
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====260 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 238.3286316394806 ms********************************* k=261*************population size : 50*******************categories : 50******************launch Time : 238
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====261 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 238.84766125679016 ms********************************* k=262*************population size : 50*******************categories : 50******************launch Time : 238
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====262 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 239.35569047927856 ms********************************* k=263*************population size : 50*******************categories : 50******************launch Time : 239
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====263 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 239.85471892356873 ms********************************* k=264*************population size : 50*******************categories : 50******************launch Time : 239
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====264 bestFit :90.0
+len of the solution : 56 and len of terminals : 19
+LAUNCH TIME : 240.41375088691711 ms
+
+
+----------(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1)   90.0

@@ -1,0 +1,42 @@
+------------------Population generation time : 236.15350723266602
+
+********************************* k=0*************population size : 50*******************categories : 7******************launch Time : 236
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====0 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 236.44952416419983 ms********************************* k=1*************population size : 50*******************categories : 1******************launch Time : 236
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====1 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 236.67953729629517 ms********************************* k=2*************population size : 50*******************categories : 1******************launch Time : 236
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====2 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 236.90054965019226 ms********************************* k=3*************population size : 50*******************categories : 1******************launch Time : 236
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====3 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 237.11956238746643 ms********************************* k=4*************population size : 50*******************categories : 1******************launch Time : 237
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====4 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 237.4385805130005 ms********************************* k=5*************population size : 50*******************categories : 1******************launch Time : 237
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====5 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 237.64459228515625 ms********************************* k=6*************population size : 50*******************categories : 1******************launch Time : 237
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====6 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 237.83660316467285 ms********************************* k=7*************population size : 50*******************categories : 1******************launch Time : 237
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====7 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 238.2006242275238 ms********************************* k=8*************population size : 50*******************categories : 1******************launch Time : 238
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====8 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 238.79265809059143 ms********************************* k=9*************population size : 50*******************categories : 1******************launch Time : 238
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====9 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 239.2646849155426 ms********************************* k=10*************population size : 50*******************categories : 1******************launch Time : 239
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====10 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 239.7257113456726 ms********************************* k=11*************population size : 50*******************categories : 1******************launch Time : 239
+>>>>>>>>>>>>>>>> new Individuals : 0******************************************* k ====11 bestFit :112.0
+len of the solution : 62 and len of terminals : 13
+LAUNCH TIME : 240.31374502182007 ms
+
+
+----------(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0)   112.0

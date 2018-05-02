@@ -14,7 +14,8 @@ class UnionFind(object):
         '''
         Constructor
         '''
-        self.parent = [None for i in range(adjacencyMatrix.shape[0])]
+#        self.parent = [None for i in range(adjacencyMatrix.shape[0])]
+        self.parent = [None for i in range(len(adjacencyMatrix))]
         self.rang = [-1 for i in range(adjacencyMatrix.shape[0])]
     
     def makeSet(self,x):

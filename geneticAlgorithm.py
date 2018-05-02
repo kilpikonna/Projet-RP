@@ -25,7 +25,7 @@ import operator
 from heuricticFunctions import *
 import time
 
-
+"""
 """
 """
 def setOfArcsOnSubset(adjacencyMatrix, nodesSubset):
@@ -63,7 +63,7 @@ def KruskalOnSubset(adjacencyMatrix, nodesSubset):
             UF.union(keys[i][0], keys[i][1])
     
     return spanningTree
-
+"""
 """
 Part 1.6 of the Project
 
@@ -161,8 +161,8 @@ Part 2.3 of the Project
 def createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize):
     
     population = []
-#    for i in range(int(populationSize/2)) :
-    for i in range(int(populationSize)) :
+    for i in range(int(populationSize/2)) :
+#    for i in range(int(populationSize)) :
         #Perturbation of the data of the adjacencyMatrix
         newAdjacencyMatrix = inputGraphRandomization(adjacencyMatrix, 5, 20)
         
@@ -172,9 +172,9 @@ def createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize):
         population.append(individual)
         
         #Solution generated using the shortest path heuristic (Part 2.1) TODO!!!!!!!!!!!!!!
-#        solution = distanceGraphHeuristic(newAdjacencyMatrix, terminals)
-#        individual = solutionToIndividual(solution.keys(), terminals, len(adjacencyMatrix)-len(terminals))
-#        population.append(individual)
+        solution = distanceGraphHeuristic(newAdjacencyMatrix, terminals)
+        individual = solutionToIndividual(solution.keys(), terminals, len(adjacencyMatrix)-len(terminals))
+        population.append(individual)
         
         #print(">new individual :::: ", individual, "\n>from solution : ", solution.keys()," \n>terminals : ", terminals)#, " type is :::: ", individual.shape)
     
@@ -531,8 +531,8 @@ def simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, f, 
 #    launchTime = initTime
     lastTime = time.time()
     k=0
-#    for k in range(n) :
-    while time.time()-startTime < 240 :    
+    for k in range(n) :
+#    while time.time()-startTime < 240 :    
         print("********************************* k=",k)
         print("*************population size : ",len(population))
 #        print(population)
@@ -587,45 +587,55 @@ populationSize = 100
 #populationSize = 50
 
 
-for i in range(1,19) :
-    
-    if i <10 :
-        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b0"+str(i)+".stp")
-    else :
-        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b"+str(i)+".stp")
-    for j in [0,2] :
-        
-        if j==0 :
-            title = "_without heuristic"
-            n = 200
-            populationSize = 100
-            initTime = time.time()
-            population = createRandomInitPopulation(len(adjacencyMatrix)-len(terminals), populationSize)
-            initTime = time.time()-initTime
-           
-
-        else :
-            title = "_with heuristic"
-            n = 100
-            populationSize = 50
-            startTime = time.time()
-            population = createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize)
-            initTime = time.time()-startTime
-            
-
-        for y in range(2) :    
-            if y == 0 :
-                title = title+"_without distinct"
-            else :
-                title = title+"_with distinct"
-            f = open(os.getcwd()+"\instances\B\output complete with time\\b_"+str(i)+title+".txt", "w")
-            f.write("------------------Population generation time : "+str(initTime)+"\n\n")
-            startTime = time.time()
-            bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, f, j+y, population, startTime-initTime)            
-            f.write("\n\n\n----------"+str(bestIndividual[0])+"   "+str(bestIndividual[1]))
-            f.close()
-    
-    
+#for i in range(1,19) :
+#    
+#    if i <10 :
+#        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b0"+str(i)+".stp")
+#    else :
+#        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b"+str(i)+".stp")
+#    for j in [0,2] :
+#        
+#        if j==0 :
+#            title = "_without heuristic"
+#            n = 200
+#            populationSize = 100
+#            initTime = time.time()
+#            population = createRandomInitPopulation(len(adjacencyMatrix)-len(terminals), populationSize)
+#            initTime = time.time()-initTime
+#           
+#
+#        else :
+#            title = "_with heuristic"
+#            n = 100
+#            populationSize = 50
+#            startTime = time.time()
+#            population = createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize)
+#            initTime = time.time()-startTime
+#            
+#
+#        for y in range(2) :    
+#            if y == 0 :
+#                title = title+"_without distinct"
+#            else :
+#                title = title+"_with distinct"
+#            f = open(os.getcwd()+"\instances\B\output complete with time\\b_"+str(i)+title+".txt", "w")
+#            f.write("------------------Population generation time : "+str(initTime)+"\n\n")
+#            startTime = time.time()
+#            bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, f, j+y, population, startTime-initTime)            
+#            f.write("\n\n\n----------"+str(bestIndividual[0])+"   "+str(bestIndividual[1]))
+#            f.close()
+#    
+#    
+adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b02.stp")
+n = 25
+populationSize = 50
+startTime = time.time()
+population = createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize)
+f = open(os.getcwd()+"\instances\B\output\whatever.txt", "w")
+initTime = time.time()
+bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, f, 2, population, startTime-initTime)            
+print(bestIndividual)
+f.close() 
     
 #iterations = 50
 

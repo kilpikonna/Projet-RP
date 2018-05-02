@@ -35,7 +35,7 @@ from itertools import chain
 def setOfArcsOnSubset(adjacencyMatrix, nodesSubset):
     arcs = dict()
     
-    for i in range(adjacencyMatrix.shape[0]):
+    for i in range(len(nodesSubset)):
         for j in range(i+1,adjacencyMatrix.shape[0]):
             if adjacencyMatrix[i][j] != 0 and adjacencyMatrix[i][j] != np.inf:
                 arcs[(nodesSubset[i],nodesSubset[j])] = adjacencyMatrix[i][j]
@@ -83,7 +83,7 @@ def setOfArcs(adjacencyMatrix):
 def KruskalOnSubset(adjacencyMatrix, nodesSubset):
     UF = UnionFind(adjacencyMatrix)
     
-    for i in range(adjacencyMatrix.shape[0]):
+    for i in range(len(nodesSubset)):
         UF.makeSet(nodesSubset[i])
 
     arcs = setOfArcsOnSubset(adjacencyMatrix,nodesSubset)
@@ -262,7 +262,7 @@ def Dijkstra(startNode, finalNode, adjacencyMatrix):
 @return: spanningTree : dict() - the spanning tree of the subgraph represented as a set of arcs, using the dict() structure
          It's a solution of the Steiner problem
 """
-def distanceGraphHeuristic(adjacenceMatrix, terminals):
+def distanceGraphHeuristic(adjacencyMatrix, terminals):
     distanceGraphAdjacenceMatrix = np.full((len(terminals), len(terminals)), np.inf)
     paths = [[None for j in range(len(terminals))] for i in range(len(terminals))]
     for i in range(len(terminals)):
@@ -272,13 +272,14 @@ def distanceGraphHeuristic(adjacenceMatrix, terminals):
         #print(i)
         for j in range(i+1,len(terminals)):
             #print("\t",j)
-            paths[i][j], distanceGraphAdjacenceMatrix[i][j] = Dijkstra(terminals[i], terminals[j], adjacenceMatrix)
+            paths[i][j], distanceGraphAdjacenceMatrix[i][j] = Dijkstra(terminals[i], terminals[j], adjacencyMatrix)
             distanceGraphAdjacenceMatrix[j][i] = distanceGraphAdjacenceMatrix[i][j]
             paths[j][i] = paths[i][j]
     
     print("------ PATHS: ",paths)
     
-    g2 = KruskalOnSubset(distanceGraphAdjacenceMatrix, terminals)
+    #g2 = KruskalOnSubset(distanceGraphAdjacenceMatrix, terminals)
+    g2 = Kruskal(distanceGraphAdjacenceMatrix)
     print("-------- G2 :", g2)
     
     g3 = g2.copy()
@@ -297,8 +298,8 @@ def distanceGraphHeuristic(adjacenceMatrix, terminals):
         for j in range(len(g3Nodes)):
             g3AdjacencyMatrix[i][j] = adjacencyMatrix[g3Nodes[i]][g3Nodes[j]]
     
-    g4 = KruskalOnSubset(g3AdjacencyMatrix, g3Nodes)
-    
+#    g4 = KruskalOnSubset(g3AdjacencyMatrix, g3Nodes)
+    g4 = Kruskal(g3AdjacencyMatrix)
     print("------------------ G4: ",g4)
     
     degrees = [0 for i in range(adjacencyMatrix.shape[0])]

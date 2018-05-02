@@ -1,0 +1,149 @@
+B - 1 : opt 82 
+without heuristic :
+> without distinct : non réalisable, 10000000062.0, k = 813, t = 4 min
+> with distinct : opt, k = 29, t = 23.65 sec
+with heuristic :
+> without distinct : opt, k = 27, t = 93.74 sec
+> with distinct : opt, k = 10, 95.05
+
+
+
+B - 2 : opt 83
+without heuristic :
+> without distinct : 97, k = 23, t = 17 sec
+> with distinct : 97, k = 19, t = 9 sec
+with heuristic :
+> without distinct : opt, k = 2, 77 sec
+> with distinct : opt, k = 0, t = 76 sec
+
+
+B - 3 : opt 138
+without heuristic :
+> without distinct : opt, k = 13, t = 12 sec
+> with distinct : opt, k = 8, t = 6 sec
+with heuristic :
+> without distinct : opt, k = 2, t = 60sec
+> with distinct : opt, k = 7, 63 sec
+
+
+B - 4 : opt 59
+without heuristic : 
+> without distinct : 63, k = 66, t = 23 sec
+> with distinct : 63, k = 23, t = 6 sec
+with heuristic :
+> without distinct : 63, k=0, t = 90 sec
+> with distinct : 63, k = 0, t = 90 sec
+
+
+B - 5 : opt 61
+without heuristic : 
+> without distinct : 62, k = 24, t = 7 sec
+> with distinct : 62, k = 29, t = 17 sec
+with heuristic : 
+> without distinct : 62, k = 
+> with distinct :
+
+B - 6 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 7 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 8 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
+B - 5 : opt 61
+without heuristic :
+> without distinct :
+> with distinct :
+with heuristic :
+> without distinct :
+> with distinct :
+
