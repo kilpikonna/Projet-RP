@@ -12,6 +12,7 @@ from UnionFind import *
 from readFile import *
 import operator
 from itertools import chain
+from pydot import graph_from_adjacency_matrix
 
 
 """
@@ -35,12 +36,25 @@ from itertools import chain
 def setOfArcsOnSubset(adjacencyMatrix, nodesSubset):
     arcs = dict()
     
+    #for i in range(adjacencyMatrix.shape[0]):
+    for i in range(len(nodesSubset)):
+        #for j in range(i+1,adjacencyMatrix.shape[0]):
+        for j in range(len(nodesSubset)):
+            if adjacencyMatrix[nodesSubset[i]][nodesSubset[j]] != 0 and adjacencyMatrix[nodesSubset[i]][nodesSubset[j]] != np.inf:
+                arcs[(nodesSubset[i],nodesSubset[j])] = adjacencyMatrix[nodesSubset[i]][nodesSubset[j]]
+                #arcs.append([i,j,adjacencyMatrix[i][j]])
+    return arcs
+"""
+def setOfArcsOnSubset(adjacencyMatrix, nodesSubset):
+    arcs = dict()
+    
     for i in range(len(nodesSubset)):
         for j in range(i+1,adjacencyMatrix.shape[0]):
             if adjacencyMatrix[i][j] != 0 and adjacencyMatrix[i][j] != np.inf:
                 arcs[(nodesSubset[i],nodesSubset[j])] = adjacencyMatrix[i][j]
                 #arcs.append([i,j,adjacencyMatrix[i][j]])
     return arcs
+"""
 
 """
 @param adjacencyMatrix: np.array(float, float), the complete adjacency matrix of graph, adjacencyMatrix[i][j] contains the value of the arc connecting 
@@ -118,9 +132,9 @@ def Kruskal(adjacencyMatrix):
         UF.makeSet(i)
 
     arcs = setOfArcs(adjacencyMatrix)
-    print("arcs1: ",arcs)
+    #print("arcs1: ",arcs)
     arcs = sorted(arcs.items(),key = operator.itemgetter(1))
-    print("arcs: ", arcs)
+    #print("arcs: ", arcs)
     
     keys = [i[0] for i in arcs]
     values = [i[1] for i in arcs]
@@ -276,41 +290,42 @@ def distanceGraphHeuristic(adjacencyMatrix, terminals):
             distanceGraphAdjacenceMatrix[j][i] = distanceGraphAdjacenceMatrix[i][j]
             paths[j][i] = paths[i][j]
     
-    #print("------ PATHS: ",paths)
     
-    #g2 = KruskalOnSubset(adjacencyMatrix, terminals)
+    print("------ PATHS: ",paths)
+    print(terminals)
+    
     g2 = Kruskal(distanceGraphAdjacenceMatrix)
-    #print("-------- G2 :", g2)
+    print(g2)
     
-    g3 = g2.copy()
+    g3 = dict()
     arcs = g2.keys()
     
-    for arc in g2:
-        #print("\t ------------- G3 before :",g3)
-        g3.pop(arc)
-        g3.update(paths[int(arc[0])][int(arc[1])])
-        #print("\t ------------- G3 after :",g3)
-    print("G3 nodes: ", g3)
+    for arc in arcs:
+        g3.update(paths[arc[0]][arc[1]])
+    print(g3)
+    
     g3Nodes = list(set(chain.from_iterable(g3.keys())))
-    g3AdjacencyMatrix = np.full((len(g3Nodes), len(g3Nodes)), np.inf)
+    print(g3Nodes)
+
+    #g3AdjacencyMatrix = np.full((len(g3Nodes), len(g3Nodes)), np.inf)
     
-    for i in range(len(g3Nodes)):
-        for j in range(len(g3Nodes)):
-            g3AdjacencyMatrix[i][j] = adjacencyMatrix[g3Nodes[i]][g3Nodes[j]]
+    #for i in range(len(g3Nodes)):
+    #    for j in range(len(g3Nodes)):
+    #        g3AdjacencyMatrix[i][j] = adjacencyMatrix[g3Nodes[i]][g3Nodes[j]]
     
-    #g4 = Kruskal(adjacencyMatrix, g3Nodes)
-    #g4 = KruskalOnSubset(g3AdjacencyMatrix, g3Nodes)
-    g4 = Kruskal(g3AdjacencyMatrix)
-    #print("------------------ G4: ",g4)
+    g4 = KruskalOnSubset(adjacencyMatrix, g3Nodes)
+    print("G4 : ", g4)
     
     degrees = [0 for i in range(adjacencyMatrix.shape[0])]
     
     arcs = g4.keys()
     
     for arc in arcs: 
-        degrees[g3Nodes[arc[0]]] +=1
-        degrees[g3Nodes[arc[1]]] +=1
+        degrees[arc[0]] +=1
+        degrees[arc[1]] +=1
         
+    print(degrees)
+    
     isTerminal = [False for i in range(adjacencyMatrix.shape[0])]
     for i in range(len(terminals)):
         isTerminal[int(terminals[i])] = True
@@ -319,32 +334,28 @@ def distanceGraphHeuristic(adjacencyMatrix, terminals):
     
     while(ntLeaves != []):
         newTree = g4.copy()
-        #print("spanningTree:", g4)
+        print("spanningTree:", g4)
         print("degrees: ",degrees)
         print("ntLeaves: ", ntLeaves)
         for leaf in ntLeaves:
             for arc in g4:
                 #print("arc: ", arc)
                 #print("arc[0] = ",arc[0], " arc[1] = ",arc[1], "leaf = ",leaf)
-                if g3Nodes[arc[0]] == leaf or g3Nodes[arc[1]]==leaf:
+                if arc[0] == leaf or arc[1]==leaf:
                     newTree.pop(arc,None)
-                    degrees[g3Nodes[arc[0]]] -= 1
-                    degrees[g3Nodes[arc[1]]] -= 1
+                    degrees[arc[0]] -= 1
+                    degrees[arc[1]] -= 1
                     print(newTree)
                     
         g4 = newTree
         
         ntLeaves = nonTerminalLeaves(degrees, isTerminal)
-      
-    arcs = g4.keys()
-    #print(g4)
-    g5 = dict()
-    g5
-    for arc in arcs:
-        g5[(g3Nodes[arc[0]], g3Nodes[arc[1]])] = g4[arc]
-        
-    #print(g5)
-    return g5
+        print(g4)
+    
+    return g4
+
+
+    
 
 """
 @param degrees: list(int), degrees[i] contains the degree of the node i in the constructed spanning tree
@@ -390,19 +401,19 @@ def ACMHeuristic(adjacencyMatrix, terminals):
     
     while(ntLeaves != []):
         newTree = spanningTree.copy()
-        print("spanningTree:", spanningTree)
-        print("degrees: ",degrees)
-        print("ntLeaves: ", ntLeaves)
+        #print("spanningTree:", spanningTree)
+        #print("degrees: ",degrees)
+        #print("ntLeaves: ", ntLeaves)
         for leaf in ntLeaves:
             nodesInSpanningTree[leaf] = False
             for arc in spanningTree:
-                print("arc: ", arc)
-                print("arc[0] = ",arc[0], " arc[1] = ",arc[1], "leaf = ",leaf)
+                #print("arc: ", arc)
+                #print("arc[0] = ",arc[0], " arc[1] = ",arc[1], "leaf = ",leaf)
                 if arc[0] == leaf or arc[1]==leaf:
                     newTree.pop(arc,None)
                     degrees[arc[0]] -= 1
                     degrees[arc[1]] -= 1
-                    print(newTree)
+                    #print(newTree)
                     
         spanningTree = newTree
         
