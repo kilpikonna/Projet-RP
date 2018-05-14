@@ -626,83 +626,77 @@ populationSize = 100
 #optTab = [82, 83, 138, 59, 61, 122, 11, 104, 220, 86, 88, 174, 165, 235, 318, 127, 131, 218]
 all_data = []
 
-optTab = [106, 220, 1565, 1935, 3250, 67, 103, 1072, 1448, 2110, 29, 42, 500, 667, 1116, 13, 23, 223, 310, 537]
+#optTab = [106, 220, 1565, 1935, 3250, 67, 103, 1072, 1448, 2110, 29, 42, 500, 667, 1116, 13, 23, 223, 310, 537]
 l=0
-for i in range(1,21):
+for i in range(1,2):
+          
+        
     num = '0'+str(i)
     if(i>9) :
         num = str(i)
-          
-    adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b"+num+".stp")
-    bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, resultwriter, 1)
-    print(bestIndividual)
-#        
-#    num = '0'+str(i)
-#    if(i>9) :
-#        num = str(i)
-#        
-#    with open(os.getcwd()+"\last output\D\Plot\\d"+num+"_random_opt4.csv", 'w') as csvfile:
-#        
-#        header = ['fitness', 'found at iteration', 'init population time', 'found after time' ]
-#        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\D\\d"+num+".stp")
-#        resultwriter = csv.writer(csvfile, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
-#        resultwriter.writerow(header)
-#        opt = optTab[i-1]
-#        M = opt+300
-#        nb_opt = 0
-#        nb_notsol = 0
-#        variance = 0
-#        nb_variance = 0
-#        nb_tests = 2 
-#        nb_sol = 0
-#        results = []
-#        realisables = []
-#        non_realisables = []
-#        for t in range(nb_tests) :
-#            bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, resultwriter, 1)
-#            resultwriter.writerow(bestIndividual[k] for k in range(len(bestIndividual)))
-#            print(bestIndividual)
-#            print(M, "difference ",bestIndividual[0]-M)
-#            
-#            results.append(bestIndividual[0])
-#            
-#            if(bestIndividual[0]==opt) :
-#                nb_opt += 1
-#                realisables.append(bestIndividual[0])
-#            elif(bestIndividual[0]-M > 0.) :
-#                non_realisables.append(bestIndividual[0])
-#                nb_notsol += 1
-#            else :
-#                variance += bestIndividual[0] - opt
-#                nb_variance += 1
-#                realisables.append(bestIndividual[0])
-#                
-#        resultwriter.writerow(['times opt reached : '+str(nb_opt),' percentage : '+str(nb_opt*100/nb_tests)])
-#        resultwriter.writerow(['times unrealisable solutions : '+str(nb_notsol), ' percentage : '+str(nb_notsol*100/nb_tests)])
-#        resultwriter.writerow(['times of non opt realisable solutions : '+str(nb_variance),' percentage : '+str(nb_variance*100/nb_tests)])
-#        if not(nb_variance==0) :
-#            resultwriter.writerow([' and average variance : ',str(variance/nb_variance)])
-#        
-#        
-#        most_common = Counter(results).most_common(1)[0]
-#        print(most_common)
-#        center = np.array([most_common[0]] * most_common[1])
-#        if(most_common[0] in realisables) : 
-#            spread = np.array(list(filter(lambda a: abs(a - most_common[0]) <= 100 and a!=most_common[0], results))) #np.array(realisables) 
-#            flier_high = np.array(list(filter(lambda a: abs(a - most_common[0]) > 100, results)))#np.array(non_realisables)
-#            flier_low = np.array([])
-##            data = np.concatenate((spread, center, flier_high), 0)
-#        else :
-#            spread = np.array(list(filter(lambda a: abs(most_common[0] - a) <= 100 and a!=most_common[0], results))) #np.array(realisables) 
-#            flier_low = np.array(list(filter(lambda a: abs(most_common[0] - a) > 100, results)))#np.array(non_realisables)
-#            flier_high = np.array([])
-##            data = np.concatenate((spread, center, flier_low), 0)
-#        print("center : ",center,"\nspread : ",spread,"\nflier_high : ",flier_high,"\nflier_low : ",flier_low)
-#        data = np.concatenate((spread, center, flier_high, flier_low), 0)
-#        all_data.append(np.concatenate((spread, center, flier_high, flier_low), 0))
-#    l+=1    
-#
-#plt.boxplot(all_data)
-#            
-#plt.savefig(os.getcwd()+"\last output\D\Plot\\_random_opt4.png")
-#        
+        
+    with open(os.getcwd()+"\\random_opt4.csv", 'w') as csvfile:
+        
+        header = ['fitness', 'found at iteration', 'init population time', 'found after time' ]
+        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b"+num+".stp")
+        resultwriter = csv.writer(csvfile, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+        resultwriter.writerow(header)
+        opt = optTab[i-1]
+        M = opt+300
+        nb_opt = 0
+        nb_notsol = 0
+        variance = 0
+        nb_variance = 0
+        nb_tests = 2 
+        nb_sol = 0
+        results = []
+        realisables = []
+        non_realisables = []
+        for t in range(nb_tests) :
+            bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, resultwriter, 1)
+            resultwriter.writerow(bestIndividual[k] for k in range(len(bestIndividual)))
+            print(bestIndividual)
+            print(M, "difference ",bestIndividual[0]-M)
+            
+            results.append(bestIndividual[0])
+            
+            if(bestIndividual[0]==opt) :
+                nb_opt += 1
+                realisables.append(bestIndividual[0])
+            elif(bestIndividual[0]-M > 0.) :
+                non_realisables.append(bestIndividual[0])
+                nb_notsol += 1
+            else :
+                variance += bestIndividual[0] - opt
+                nb_variance += 1
+                realisables.append(bestIndividual[0])
+                
+        resultwriter.writerow(['times opt reached : '+str(nb_opt),' percentage : '+str(nb_opt*100/nb_tests)])
+        resultwriter.writerow(['times unrealisable solutions : '+str(nb_notsol), ' percentage : '+str(nb_notsol*100/nb_tests)])
+        resultwriter.writerow(['times of non opt realisable solutions : '+str(nb_variance),' percentage : '+str(nb_variance*100/nb_tests)])
+        if not(nb_variance==0) :
+            resultwriter.writerow([' and average variance : ',str(variance/nb_variance)])
+        
+        
+        most_common = Counter(results).most_common(1)[0]
+        print(most_common)
+        center = np.array([most_common[0]] * most_common[1])
+        if(most_common[0] in realisables) : 
+            spread = np.array(list(filter(lambda a: abs(a - most_common[0]) <= 100 and a!=most_common[0], results))) #np.array(realisables) 
+            flier_high = np.array(list(filter(lambda a: abs(a - most_common[0]) > 100, results)))#np.array(non_realisables)
+            flier_low = np.array([])
+#            data = np.concatenate((spread, center, flier_high), 0)
+        else :
+            spread = np.array(list(filter(lambda a: abs(most_common[0] - a) <= 100 and a!=most_common[0], results))) #np.array(realisables) 
+            flier_low = np.array(list(filter(lambda a: abs(most_common[0] - a) > 100, results)))#np.array(non_realisables)
+            flier_high = np.array([])
+#            data = np.concatenate((spread, center, flier_low), 0)
+        print("center : ",center,"\nspread : ",spread,"\nflier_high : ",flier_high,"\nflier_low : ",flier_low)
+        data = np.concatenate((spread, center, flier_high, flier_low), 0)
+        all_data.append(np.concatenate((spread, center, flier_high, flier_low), 0))
+    l+=1    
+
+plt.boxplot(all_data)
+            
+plt.savefig(os.getcwd()+"\\random_opt4.png")
+        
