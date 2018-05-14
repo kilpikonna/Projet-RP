@@ -2,18 +2,6 @@
 """
 Created on Tue Apr 17 21:43:58 2018
 
-
-
-
-Things to do :
-    are prob and cumprob useful ?
-    how to choose M value ?
-    run tests 
-    check about randomInit
-    use heuristic init
-    new population (2 methods)
-    other selection ? crossover ? mutation ?
-    
     
 """
 
@@ -24,10 +12,14 @@ from UnionFind import *
 import operator
 from heuricticFunctions import *
 import time
+import csv
+import matplotlib.pyplot as plt
+from collections import Counter
+
 
 """
 """
-"""
+
 def setOfArcsOnSubset(adjacencyMatrix, nodesSubset):
     arcs = dict()
     
@@ -63,7 +55,7 @@ def KruskalOnSubset(adjacencyMatrix, nodesSubset):
             UF.union(keys[i][0], keys[i][1])
     
     return spanningTree
-"""
+
 """
 Part 1.6 of the Project
 
@@ -158,7 +150,7 @@ Part 2.3 of the Project
                             applied on a perturbed adjacencyMatrix
 """
 
-def createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize):
+def createHeuristicalInitPopulation(adjacencyMatrix, terminals, populationSize):
     
     population = []
     for i in range(int(populationSize/2)) :
@@ -166,14 +158,23 @@ def createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize):
         #Perturbation of the data of the adjacencyMatrix
         newAdjacencyMatrix = inputGraphRandomization(adjacencyMatrix, 5, 20)
         
+        startTime = time.time()
         #Solution generated using the spanning tree heuristic (Part 2.2)
         solution = ACMHeuristic(newAdjacencyMatrix, terminals)
         individual = solutionToIndividual(solution.keys(), terminals, len(adjacencyMatrix)-len(terminals))
         population.append(individual)
-        
+        print(">>time of ACMH : ",time.time()-startTime)
+        startTime = time.time()
         #Solution generated using the shortest path heuristic (Part 2.1) TODO!!!!!!!!!!!!!!
+
+    for i in range(int(populationSize/2)) :
+#    for i in range(int(populationSize)) :
+        #Perturbation of the data of the adjacencyMatrix
+        newAdjacencyMatrix = inputGraphRandomization(adjacencyMatrix, 5, 20)
+    
         solution = distanceGraphHeuristic(newAdjacencyMatrix, terminals)
         individual = solutionToIndividual(solution.keys(), terminals, len(adjacencyMatrix)-len(terminals))
+        print(">>time of Distance : ",time.time()-startTime)
         population.append(individual)
         
         #print(">new individual :::: ", individual, "\n>from solution : ", solution.keys()," \n>terminals : ", terminals)#, " type is :::: ", individual.shape)
@@ -269,7 +270,9 @@ Part 1.3.1 of the Project : parents selection
 
 """      
 def rouletteWheelSelection(fitnessList, fitnessSum) : # select parents
-        
+    
+    fitnessList_sorted = fitnessList.copy()
+    fitnessList_sorted.sort(key=operator.itemgetter(2), reverse=True)
     # select a random a number in the range [0,1]
     random_num1=random.uniform(0,fitnessSum)#.random() #.randint(0, fitnessSum)
     random_num2=random.uniform(0,fitnessSum)#.random() #(0, fitnessSum)
@@ -277,19 +280,15 @@ def rouletteWheelSelection(fitnessList, fitnessSum) : # select parents
     parent2 = None
     partialSum = 0
     
-#    parent1 = fitnessList[0][0]
-#    parent2 = fitnessList[1][0]
-    
-    
-    for i in range(len(fitnessList)) :
-        partialSum = partialSum + fitnessList[i][1]
+    for i in range(len(fitnessList_sorted)) :
+        partialSum = partialSum + fitnessList_sorted[i][2]
         if partialSum >= random_num1 and parent1 == None :
-            parent1 = fitnessList[i][0]
+            parent1 = fitnessList_sorted[i][0]
         if partialSum >= random_num2 and parent2 == None :    
-            parent2 = fitnessList[i][0]
+            parent2 = fitnessList_sorted[i][0]
         if parent1 != None and parent2 != None :
             break
-    
+
     return parent1, parent2
 
 
@@ -328,7 +327,7 @@ performs a mutation of the individual with probability 4/100 : selects a random 
 @param : child : np.array() : individual
     
 """  
-def bitFlip_mutation(child) : 
+def bitFlipMutation(child) : 
     perform_mutation = random.random()
     if(perform_mutation<=4/100) :
         index = random.randint(0, len(child)-1)
@@ -406,7 +405,7 @@ def getNbOfNewIndividuals(oldPopulation, newPopulation) :
 
 """
 def bestDistinctIndividuals(fitnessList, populationSize) :
-    m = len(fitnessList)
+#    m = len(fitnessList)
     
     population = [fitnessList[i][0] for i in range(len(fitnessList))] #type is tuple
     
@@ -451,16 +450,22 @@ def bestDistinctIndividuals(fitnessList, populationSize) :
 @return : list() of np.array() : the new population of the best individuals among parents and children
 """
 
-def elitisimBasedSurvivorSelection(fitnessList, fitnessSum, populationSize, j) :
-    fitnessList.sort(key=operator.itemgetter(1))    
-    for i in range(populationSize) :
+def elitisimBasedSurvivorSelection(fitnessList, populationSize, j) :
+    fitnessList.sort(key=operator.itemgetter(1)) 
+    
+    # calculate and adapts fitness to fit the rule : the more the fit the more the individual's prob is
+    fitnessSum = 0
+    for individual in fitnessList :
+        fitnessSum += individual[2]
+    
+    for i in range(int(populationSize/2)) :
         # selection : select two parents (individuals) among the population 
         parent1, parent2 = rouletteWheelSelection(fitnessList.copy(), fitnessSum)              
         # crossover : we select a random crossover point and exchange the tails of the parents to get 2 new individuals
         child1, child2 = onePoint_crossover(parent1, parent2)
         # mutation : exchange the value of a random node
-        bitFlip_mutation(child1)
-        bitFlip_mutation(child2)
+        bitFlipMutation(child1)
+        bitFlipMutation(child2)
         # insertion : insert new individuals to the population
         tchild1 = tuple(child1) 
         fit = fitness(terminals, tchild1, adjacencyMatrix, M)
@@ -477,7 +482,17 @@ def elitisimBasedSurvivorSelection(fitnessList, fitnessSum, populationSize, j) :
     else :
         bestIndvs = bestDistinctIndividuals(fitnessList, populationSize)
     
-    return bestIndvs
+    newFitnessList = []
+    for i in range(len(fitnessList)) :
+#        print(type(fitnessList[i][0])," : ",list(fitnessList[i][0])," and bestIndvs : ",type(bestIndvs[0])," : ",bestIndvs[0])
+#        any((a == x).all() for x in my_list)
+        if any((np.array(list(fitnessList[i][0]==individual))).all() for individual in bestIndvs) and not(fitnessList[i] in newFitnessList):
+            newFitnessList.append(fitnessList[i])
+    
+#    print("pop len : ",len(bestIndvs)," and fitness len : ",len(newFitnessList))
+    return bestIndvs, newFitnessList
+    
+#    return bestIndvs
 
 """
 @param : fitnessList : list() of list() of shape [individual, fitness of this individual, 1/fitness of the individual]
@@ -498,11 +513,13 @@ def childrenBasedSurvivorSelection(fitnessList, fitnessSum, populationSize) :
         # crossover : we select a random crossover point and exchange the tails of the parents to get 2 new individuals
         child1, child2 = onePoint_crossover(parent1, parent2)
         # mutation : exchange the value of a random node
-        bitFlip_mutation(child1)
-        bitFlip_mutation(child2)
+        bitFlipMutation(child1)
+        bitFlipMutation(child2)
         # insertion : insert new individuals to the population
         population.append(child1)
         population.append(child2)
+        
+        
         
     return population
         
@@ -521,176 +538,171 @@ def childrenBasedSurvivorSelection(fitnessList, fitnessSum, populationSize) :
 @return : list() of shape : [individual : tuple(), fitness] : the best solution found with genetic algorithm 
 
 """  
-def simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, f, j, population, startTime) :
+def simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, f, j) :
     
-#    if j<2 :
-#        population = createRandomInitPopulation(len(adjacencyMatrix)-len(terminals), populationSize)
-#    else :
-#        population = createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize)
+    startTime = time.time()
+    overallTime = startTime
+    population = createRandomInitPopulation(len(adjacencyMatrix)-len(terminals), populationSize)
+#    population = createHeuristicalInitPopulation(adjacencyMatrix, terminals, populationSize)
+    initTime = time.time()-startTime
+
     fitnessList = []
+#    solution = []
+    bestIndividual = []
+    populationSize = len(population)
 #    launchTime = initTime
-    lastTime = time.time()
+    startTime = time.time()
+#    lastTime = time.time()
+    
+#     calculate and adapts fitness to fit the rule : the more the fit the more the individual's prob is
+    fitnessSum = 0
+    for i in range(populationSize) :
+        individual = tuple(population[i])
+        fit = fitness(terminals, individual, adjacencyMatrix, M)
+        fitnessList.append([individual, fit, 1/fit])#, 0, 0] # {individual : [fitness, new fitness, probability, cumprob]}
+        fitnessSum += 1/fit
+        
+    
+    
+    
     k=0
-    for k in range(n) :
-#    while time.time()-startTime < 240 :    
-        print("********************************* k=",k)
-        print("*************population size : ",len(population))
-#        print(population)
-        print("*******************categories : ", len(getCategories(population)))
-        f.write("********************************* k="+str(k))
-        f.write("*************population size : "+str(len(population)))
-#        print(population)
-        f.write("*******************categories : "+str(len(getCategories(population))))
-        f.write("******************launch Time : "+str(int(time.time()-startTime)))
-        fitnessList = []
-        fitnessSum = 0
+    while k<n and time.time()-overallTime<240. :
+#    while time.time()-overallTime < 240. :    
+#        print("********************************* k=",k)
+#        print("*************population size : ",len(population))
+##        print(population)
+#        print("*******************categories : ", len(getCategories(population)))
+#        f.write("********************************* k="+str(k))
+#        f.write("*************population size : "+str(len(population)))
+##        print(population)
+#        f.write("*******************categories : "+str(len(getCategories(population))))
+#        f.write("******************launch Time : "+str(int(time.time()-startTime)))
+#        fitnessList = []
+#        fitnessSum = 0
+#        
+         
+        print("time ::",time.time()-overallTime)
         
+            
+
+        # choose next generation
+#        newPopulation = elitisimBasedSurvivorSelection(fitnessList, fitnessSum, populationSize, j)
+
+        population, fitnessList = elitisimBasedSurvivorSelection(fitnessList, populationSize, j)
+
+
+#        newPopulation = childrenBasedSurvivorSelection(fitnessList, fitnessSum, populationSize)
+#        print(">>>>>>>>>>>>>>>> new Individuals : ",getNbOfNewIndividuals(population, newPopulation))
+#        f.write("\n>>>>>>>>>>>>>>>> new Individuals : "+str(getNbOfNewIndividuals(population, newPopulation)))
+#        population = newPopulation
         
-        # calculate and adapts fitness to fit the rule : the more the fit the more the individual's prob is
-        for i in range(populationSize) :
-            individual = tuple(population[i])
-            fit = fitness(terminals, individual, adjacencyMatrix, M)
-            fitnessList.append([individual, fit, 1/fit])#, 0, 0] # {individual : [fitness, new fitness, probability, cumprob]}
-            fitnessSum += 1/fit
-
-        newPopulation = elitisimBasedSurvivorSelection(fitnessList, fitnessSum, populationSize, j)
-        print(">>>>>>>>>>>>>>>> new Individuals : ",getNbOfNewIndividuals(population, newPopulation))
-        f.write("\n>>>>>>>>>>>>>>>> new Individuals : "+str(getNbOfNewIndividuals(population, newPopulation)))
-        population = newPopulation
-        bestIndividual = []
-
+        #
         for individual in fitnessList :
-            if len(bestIndividual) == 0 or bestIndividual[1] > individual[1] :
-                bestIndividual = [individual[0], individual[1]]
+            if len(bestIndividual) == 0 or bestIndividual[0] > individual[1] :
+                bestIndividual = [individual[1], k, initTime, time.time()-startTime, time.time()-overallTime, individual[0]]
             i += 1
-        print("******************************************* k ====",k," bestFit :", bestIndividual[1], 
-              "\nlen of the solution : ", len(bestIndividual[0]), " and len of terminals : ",len(terminals))
-        f.writelines("******************************************* k ===="+str(k)+" bestFit :"+str(bestIndividual[1])+
-              "\nlen of the solution : "+str(len(bestIndividual[0]))+" and len of terminals : "+str(len(terminals)))
-        launchTime = time.time() - startTime   
-#        lastTime = time.time()
-        f.write("\nLAUNCH TIME : "+str(launchTime)+" ms")
-        print("LAUNCH TIME : "+str(launchTime)+" ms")
+#        print("******************************************* k ====",k," bestFit :", bestIndividual[1], 
+#              "\nlen of the solution : ", len(bestIndividual[0]),"\nfound at iteration k==",  bestIndividual[2],"///at time ====", bestIndividual[3],"\n and len of terminals : ",len(terminals))
+#        f.writelines("******************************************* k ===="+str(k)+" bestFit :"+str(bestIndividual[1])+
+#              "\nlen of the solution : "+str(len(bestIndividual[0]))+" and len of terminals : "+str(len(terminals)))
+#        launchTime = time.time() - startTime   
+##        lastTime = time.time()
+#        f.write("\nLAUNCH TIME : "+str(launchTime)+" ms")
+#        print("LAUNCH TIME : "+str(launchTime)+" ms")
         k+=1
-        
+    
+    """    
     bestIndividual = []
     for individual in fitnessList :
         if len(bestIndividual) == 0 or bestIndividual[1] > individual[1] :
             bestIndividual = [individual[0], individual[1]]
-    
+    """
     return bestIndividual
-        
-M = 100000*100000
-n = 200
+     
+M = 1000
+n = 5
 populationSize = 100
-#n = 100
-#populationSize = 50
 
+#optTab = [82, 83, 138, 59, 61, 122, 11, 104, 220, 86, 88, 174, 165, 235, 318, 127, 131, 218]
+all_data = []
 
-#for i in range(1,19) :
-#    
-#    if i <10 :
-#        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b0"+str(i)+".stp")
-#    else :
-#        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b"+str(i)+".stp")
-#    for j in [0,2] :
+optTab = [106, 220, 1565, 1935, 3250, 67, 103, 1072, 1448, 2110, 29, 42, 500, 667, 1116, 13, 23, 223, 310, 537]
+l=0
+for i in range(1,21):
+    num = '0'+str(i)
+    if(i>9) :
+        num = str(i)
+          
+    adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b"+num+".stp")
+    bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, resultwriter, 1)
+    print(bestIndividual)
 #        
-#        if j==0 :
-#            title = "_without heuristic"
-#            n = 200
-#            populationSize = 100
-#            initTime = time.time()
-#            population = createRandomInitPopulation(len(adjacencyMatrix)-len(terminals), populationSize)
-#            initTime = time.time()-initTime
-#           
-#
-#        else :
-#            title = "_with heuristic"
-#            n = 100
-#            populationSize = 50
-#            startTime = time.time()
-#            population = createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize)
-#            initTime = time.time()-startTime
+#    num = '0'+str(i)
+#    if(i>9) :
+#        num = str(i)
+#        
+#    with open(os.getcwd()+"\last output\D\Plot\\d"+num+"_random_opt4.csv", 'w') as csvfile:
+#        
+#        header = ['fitness', 'found at iteration', 'init population time', 'found after time' ]
+#        adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\D\\d"+num+".stp")
+#        resultwriter = csv.writer(csvfile, delimiter=',', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+#        resultwriter.writerow(header)
+#        opt = optTab[i-1]
+#        M = opt+300
+#        nb_opt = 0
+#        nb_notsol = 0
+#        variance = 0
+#        nb_variance = 0
+#        nb_tests = 2 
+#        nb_sol = 0
+#        results = []
+#        realisables = []
+#        non_realisables = []
+#        for t in range(nb_tests) :
+#            bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, resultwriter, 1)
+#            resultwriter.writerow(bestIndividual[k] for k in range(len(bestIndividual)))
+#            print(bestIndividual)
+#            print(M, "difference ",bestIndividual[0]-M)
 #            
-#
-#        for y in range(2) :    
-#            if y == 0 :
-#                title = title+"_without distinct"
+#            results.append(bestIndividual[0])
+#            
+#            if(bestIndividual[0]==opt) :
+#                nb_opt += 1
+#                realisables.append(bestIndividual[0])
+#            elif(bestIndividual[0]-M > 0.) :
+#                non_realisables.append(bestIndividual[0])
+#                nb_notsol += 1
 #            else :
-#                title = title+"_with distinct"
-#            f = open(os.getcwd()+"\instances\B\output complete with time\\b_"+str(i)+title+".txt", "w")
-#            f.write("------------------Population generation time : "+str(initTime)+"\n\n")
-#            startTime = time.time()
-#            bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, f, j+y, population, startTime-initTime)            
-#            f.write("\n\n\n----------"+str(bestIndividual[0])+"   "+str(bestIndividual[1]))
-#            f.close()
-#    
-#    
-adjacencyMatrix, terminals = readInstance(os.getcwd()+"\instances\B\\b02.stp")
-n = 25
-populationSize = 50
-startTime = time.time()
-population = createHeuristicInitPopulation(adjacencyMatrix, terminals, populationSize)
-f = open(os.getcwd()+"\instances\B\output\whatever.txt", "w")
-initTime = time.time()
-bestIndividual = simpleGeneticAlgorithm(adjacencyMatrix, terminals, populationSize, n, M, f, 2, population, startTime-initTime)            
-print(bestIndividual)
-f.close() 
-    
-#iterations = 50
-
-#terminals = [20, 18, 24]
-#individual = np.zeros((37))
-
-#print(fitness(terminals, individual, adjacencyMatrix,M))
-#print(terminals)
-#print(adjacencyMatrix, terminals)
-
-
-
-
-
-#print()
-#print(fitness(terminals, np.array(([0,0,0,0,1,1,0,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0])), adjacencyMatrix,M))
-
-
-#Codage:  [1-0, 2-0, 3-0, 4-0, 5-0, 8-0, 10-0, 12-0, 13-0, 14-0, 15-0, 16-0, 17-0, 18-0, 20-1, 21-0, 22-0, 
-#          24-1,1, 27-1, 29-1, 30-0, 31-0, 32-0, 33-0, 34-0, 35-1, 36-1, 37-1, 38-0, 42-0,  44-1,
-#          45-1, 46-0, 47-1, 48-0, 50-0]
-#         
-#Liste de sommets :
-# ['u22', 'u1', 'u15', 'u38',
-#  'u45', 'u27', 'u18', 'u48', 'u36', 'u3', 'u8', 'u21', 'u17', 'u24', 'u50', 'u37', 'u33', 'u35', 'u5', 'u42', 'u20',
-#  'u46', 'u26', 'u29', 'u14', 'u16', 'u30', 'u31', 'u47', 'u44', 'u10', 'u2', 'u13', 'u34', 'u4', 'u32', 'u12']
-
-#parent1 = [0,1,0,0,0,0,0,0]
-#parent2 = [1,0,1,1,1,1,1,1]
+#                variance += bestIndividual[0] - opt
+#                nb_variance += 1
+#                realisables.append(bestIndividual[0])
+#                
+#        resultwriter.writerow(['times opt reached : '+str(nb_opt),' percentage : '+str(nb_opt*100/nb_tests)])
+#        resultwriter.writerow(['times unrealisable solutions : '+str(nb_notsol), ' percentage : '+str(nb_notsol*100/nb_tests)])
+#        resultwriter.writerow(['times of non opt realisable solutions : '+str(nb_variance),' percentage : '+str(nb_variance*100/nb_tests)])
+#        if not(nb_variance==0) :
+#            resultwriter.writerow([' and average variance : ',str(variance/nb_variance)])
+#        
+#        
+#        most_common = Counter(results).most_common(1)[0]
+#        print(most_common)
+#        center = np.array([most_common[0]] * most_common[1])
+#        if(most_common[0] in realisables) : 
+#            spread = np.array(list(filter(lambda a: abs(a - most_common[0]) <= 100 and a!=most_common[0], results))) #np.array(realisables) 
+#            flier_high = np.array(list(filter(lambda a: abs(a - most_common[0]) > 100, results)))#np.array(non_realisables)
+#            flier_low = np.array([])
+##            data = np.concatenate((spread, center, flier_high), 0)
+#        else :
+#            spread = np.array(list(filter(lambda a: abs(most_common[0] - a) <= 100 and a!=most_common[0], results))) #np.array(realisables) 
+#            flier_low = np.array(list(filter(lambda a: abs(most_common[0] - a) > 100, results)))#np.array(non_realisables)
+#            flier_high = np.array([])
+##            data = np.concatenate((spread, center, flier_low), 0)
+#        print("center : ",center,"\nspread : ",spread,"\nflier_high : ",flier_high,"\nflier_low : ",flier_low)
+#        data = np.concatenate((spread, center, flier_high, flier_low), 0)
+#        all_data.append(np.concatenate((spread, center, flier_high, flier_low), 0))
+#    l+=1    
 #
-#print(onePoint_crossover(parent1, parent2))
-#bitFlip_mutation(parent1)
-#print(parent1)
-
-matrix = np.zeros((5,5))
-matrix[0] = [0,0,2,1,5]
-matrix[1] = [0,0,6,4,2]
-matrix[2] = [2,6,0,3,1]
-matrix[3] = [1,4,3,0,2]
-matrix[4] = [5,2,1,2,0]
-#
-#fitnessList = [[tuple([0,0,0]), 10],
-#                [tuple([0,0,1]), 4],
-#                [tuple([0,1,1]), 6],
-#                [tuple([0,1,0]), 1],
-#                [tuple([0,0,1]), 4]
-#                ]
-#
-#print(bestDistinctIndividuals(fitnessList, 5))
-
-#parent1 = [0,0,1,1,0]
-#parent2 = [0,0,0,1,1]
-#n=100
-
-#print(createHeuristicInitPopulation(matrix, [0,1], 10))
-
-#print(simpleGeneticAlgorithm(matrix, [0,1], n, M))
-
+#plt.boxplot(all_data)
+#            
+#plt.savefig(os.getcwd()+"\last output\D\Plot\\_random_opt4.png")
+#        
